@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-primary: #0077CC;
-  --color-accent-100: #00BFFF;
-  --color-accent-200: #00619A;
-
-  --color-text-primary: #fff;
-  --color-text-secondary: #e0e0e0;
-
-  --color-bg-primary: #1a1a1a;
-  --color-bg-secondary: #292929;
-  --color-bg-tertiary: #404040;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -23,20 +10,17 @@
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  @apply text-text-1;
 }
 
 body {
-  
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
 
 @layer utilities {
   .text-balance {

@@ -65,7 +65,8 @@ const Hero = () => {
           СОЗДАЕМ УНИКАЛЬНОСТЬ
         </h1>
         <h2 className="fixed left-[50%] top-[48%] z-20 -translate-x-[50%] text-[1.7vw] font-medium text-text-1/75">
-          Креативное агенство из Туркменистана
+          {/* Креативное агенство из Туркменистана */}
+          Lorem ipsum dolor sit amet consectetur adipisicing.
         </h2>
         <div ref={plane1} className={`absolute left-0 top-0 z-10 h-full w-full`}>
           <Image src={main_1} fill={true} alt="" objectFit="cover" />

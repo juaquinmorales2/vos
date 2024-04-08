@@ -17,9 +17,10 @@ export default function Home() {
           <ParallaxCard className="min-h-screen bg-gradient-to-b from-bg-1 to-bg-2">
             <Hero />
           </ParallaxCard>
-          <ParallaxCard className="bg-gradient-to-b from-bg-2 to-bg-1 ">
+          {/* <ParallaxCard className="bg-gradient-to-b from-bg-2 to-bg-1 "> */}
             <About />
-          </ParallaxCard>
+          {/* </ParallaxCard> */}
+          <div className="h-[200vh] bg-text-1 w-full z-[500]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae maiores id ipsum minima, praesentium debitis fugiat, magnam labore nihil, aliquid dolorum quo? Provident iure mollitia soluta placeat quos illo inventore, esse exercitationem ea eum rem a enim vero sint quidem, nihil sequi quisquam excepturi. Consectetur excepturi necessitatibus nemo ab.</div>
         </div>
       </div>
     </main>

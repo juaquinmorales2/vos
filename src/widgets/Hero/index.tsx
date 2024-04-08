@@ -29,6 +29,7 @@ const Hero = () => {
     }
   };
 
+  // make images auto movable "chat gpt?"
   const lerp = (start: number, target: number, amount: number) => start * (1 - amount) + target * amount;
 
   const animate = () => {

@@ -5,7 +5,7 @@ interface Props {}
 
 const Index: FC<Props> = () => {
   return (
-    <div className="relative self-start px-20 py-16 ">
+    <div className="relative self-start px-20 py-16 bg-gradient-to-b from-bg-2 to-bg-1">
       <h3 className="text-[7.5vw] font-extrabold">О НАС.</h3>
 
       <div className="flex space-x-16">

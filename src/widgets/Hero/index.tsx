@@ -1,7 +1,8 @@
 "use client";
-import { MouseEvent, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import Spotlight from "@/components/Spotlight";
 
@@ -59,14 +60,26 @@ const Hero = () => {
     }
   };
 
+  const container = useRef<any>(null)
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"]
+  })
+
+  const lg = useTransform(scrollYProgress, [0, 1], [0, -500])
+
+
   return (
     <main className="relative bg-gradient-to-b from-bg-1 to-bg-2">
-      <div onMouseMove={(e) => manageMouseMove(e)} className="relative left-0 top-0 h-screen w-full overflow-hidden">
+      <div ref={container} onMouseMove={(e) => manageMouseMove(e)} className="relative left-0 top-0 h-screen w-full overflow-hidden">
         <h1 className="fixed left-[50%] top-[35%] z-20 w-full -translate-x-[50%] text-center text-[4.5vw] font-extrabold text-text-1">
           СОЗДАЕМ УНИКАЛЬНОСТЬ
         </h1>
         <h2 className="fixed left-[50%] top-[48%] z-20 -translate-x-[50%] text-[1.7vw] font-medium text-text-1/75">
-          Креативное агенство из Туркменистана
+          {/* Креативное агенство из Туркменистана */}
+          Lorem ipsum dolor sit amet.
+          Lorem ipsum dolor sit amet.
         </h2>
         <div ref={plane1} className={`absolute left-0 top-0 z-10 h-full w-full`}>
           <Image src={main_1} fill={true} alt="" objectFit="cover" />

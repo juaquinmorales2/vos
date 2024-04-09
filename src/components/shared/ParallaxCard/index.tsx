@@ -10,7 +10,7 @@ interface Props {
 
 const Index: FC<Props> = ({ className, i, children }) => {
   return (
-    <div className={`sticky top-0 flex items-center justify-center ${className}`} style={{ top: `calc(-5vh + ${(i || 0) * 200}px)`, }} >
+    <div className={`sticky top-0 flex items-center justify-center ${className}`} style={{ top: `calc(-5vh + ${(i || 0) * 110}px)`, }} >
       <div className="relative flex h-[screen] w-full origin-top flex-col">
         {children}
       </div>

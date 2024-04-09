@@ -18,34 +18,40 @@ export default function Home() {
           <ParallaxCard className="min-h-screen bg-gradient-to-b from-bg-1 to-bg-2">
             <Hero />
           </ParallaxCard>
-          {/* <ParallaxCard className="bg-gradient-to-b from-bg-2 to-bg-1"> */}
-            <About />
-          {/* </ParallaxCard> */}
+          <About />
 
-          <div className="relative">
-            <h3 className=" text-[3vw] text-text-1 bg-bg-2 sticky top-0 z-[500]">УСЛУГИ.</h3>
+          <div className="relative bg-gradient-to-b from-bg-1 to-bg-2 to-75%">
+            <h3 className="text-[7.5vw] font-extrabold text-right text-text-1 bg-bg-1 sticky top-0 px-20  border-b border-gray-1 z-50">УСЛУГИ.</h3>
             {CARDS.map(({ title, services, description, number, classes }, i) => (
-              <ParallaxCard key={number} className={`h-[60vh] ${classes}`} i={i}>
-                <div className="flex space-x-10 ">
-                  <div >
-                    <h4>{title}</h4>
-                    <ul>
-                      {services.map(service => (
-                        <li key={service}>{service}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <p>{description}</p>
-                    <span>{number}</span>
+              <div key={number} className={`flex space-x-10 items-center h-[400px] first:border-none px-20 ${classes}`}>
+                <div className="flex-1">
+                  <h4 className="text-[3vw] font-light mb-[36px]">{title}</h4>
+                  <div className="flex flex-wrap space-y-6">
+                    {services.map((service, i) => {
+                      return (
+                        <ul key={i} className="flex items-center text-[1.7vw] space-x-16 font-semibold">
+                          {service.map(s => (
+                            <li key={s} className="flex items-center space-x-2">
+                              <div className="w-4 h-4 rounded-full bg-[#fff]/40"></div>
+                              <p>{s}</p>
+                            </li>
+                          ))}
+                        </ul>
+                      )
+                    })
+                    }
                   </div>
                 </div>
-              </ParallaxCard>
+                <div className="flex-1 text-[1.4] relative">
+                  <p className="leading-[170%]  font-medium">{description}</p>
+                  <div className="absolute top-0 right-20 text-right text-[196px] text-[#fff]/5 font-extrabold tracking-[5%]">{number}</div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
-        <div className="h-[200vh] bg-bg-1 w-full z-[2000]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, mollitia totam perferendis assumenda minus omnis suscipit repudiandae aliquam quidem asperiores.</div>
       </div>
+      <div className="h-[125vh] bg-[#2f2] w-full z-[9000]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, mollitia totam perferendis assumenda minus omnis suscipit repudiandae aliquam quidem asperiores.</div>
     </main>
   );
 }

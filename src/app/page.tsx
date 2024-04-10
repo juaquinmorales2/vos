@@ -15,43 +15,49 @@ export default function Home() {
       <Navigation />
       <div className="relative">
         <div ref={container} className=" bg-text-1">
-          <ParallaxCard className="min-h-screen bg-gradient-to-b from-bg-1 to-bg-2">
-            <Hero />
-          </ParallaxCard>
+          {/* <ParallaxCard className="min-h-screen bg-gradient-to-b from-bg-1 to-bg-2"> */}
+          <Hero />
+          {/* </ParallaxCard> */}
           <About />
 
-          <div className="relative bg-gradient-to-b from-bg-1 to-bg-2 to-75%">
-            <h3 className="text-[7.5vw] font-extrabold text-right text-text-1 bg-bg-1 sticky top-0 px-20  border-b border-gray-1 z-50">УСЛУГИ.</h3>
+          <div className="relative bg-bg-1 to-75%">
+            <h3 className="sticky top-0 z-50 border-t border-gray-1 bg-bg-1 px-20 text-right  text-[7.5vw] font-extrabold text-text-1">
+              УСЛУГИ.
+            </h3>
             {CARDS.map(({ title, services, description, number, classes }, i) => (
-              <div key={number} className={`flex space-x-10 items-center h-[400px] first:border-none px-20 ${classes}`}>
+              <div key={number} className={`flex h-[400px] items-center space-x-10 px-20 first:border-none ${classes}`}>
                 <div className="flex-1">
-                  <h4 className="text-[3vw] font-light mb-[36px]">{title}</h4>
+                  <h4 className="mb-[36px] text-[3vw] font-light">{title}</h4>
                   <div className="flex flex-wrap space-y-6">
                     {services.map((service, i) => {
                       return (
-                        <ul key={i} className="flex items-center text-[1.7vw] space-x-16 font-semibold">
-                          {service.map(s => (
+                        <ul key={i} className="flex items-center space-x-16 text-[1.7vw] font-semibold">
+                          {service.map((s) => (
                             <li key={s} className="flex items-center space-x-2">
-                              <div className="w-4 h-4 rounded-full bg-[#fff]/40"></div>
+                              <div className="h-4 w-4 rounded-full bg-[#fff]/40"></div>
                               <p>{s}</p>
                             </li>
                           ))}
                         </ul>
-                      )
-                    })
-                    }
+                      );
+                    })}
                   </div>
                 </div>
-                <div className="flex-1 text-[1.4] relative">
-                  <p className="leading-[170%]  font-medium">{description}</p>
-                  <div className="absolute top-0 right-20 text-right text-[196px] text-[#fff]/5 font-extrabold tracking-[5%]">{number}</div>
+                <div className="relative flex-1 text-[1.4]">
+                  <p className="font-medium  leading-[170%]">{description}</p>
+                  <div className="absolute right-20 top-0 text-right text-[196px] font-extrabold tracking-[5%] text-[#fff]/5">
+                    {number}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <div className="h-[125vh] bg-[#2f2] w-full z-[9000]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, mollitia totam perferendis assumenda minus omnis suscipit repudiandae aliquam quidem asperiores.</div>
+      <div className="h-[125vh] w-full bg-[#f229]">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, mollitia totam perferendis assumenda minus
+        omnis suscipit repudiandae aliquam quidem asperiores.
+      </div>
     </main>
   );
 }

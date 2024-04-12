@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import "@/shared/styles/globals.scss";
-import Lenis from "@studio-freight/lenis";
+import '@/shared/styles/globals.scss';
+import Lenis from '@studio-freight/lenis';
 
-import { Montserrat } from "next/font/google";
-import { useEffect, useState } from "react";
+import { Montserrat } from 'next/font/google';
+import { useEffect, useState } from 'react';
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ['latin'] });
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,7 +26,7 @@ export default function RootLayout({
       setDimension({ width: window.innerWidth, height: window.innerHeight });
     };
 
-    window.addEventListener("resize", resize);
+    window.addEventListener('resize', resize);
     requestAnimationFrame(raf);
     resize();
 

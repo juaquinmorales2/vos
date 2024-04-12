@@ -1,4 +1,4 @@
-import gsap from "gsap";
+import gsap from 'gsap';
 
 const useFloatingImages = (ref1: any, ref2: any, ref3: any) => {
   let requestAnimationFrameId: any = null;

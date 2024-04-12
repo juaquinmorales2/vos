@@ -1,7 +1,7 @@
-"use client";
-import { HTMLProps, ReactNode } from "react";
+'use client';
+import { HTMLProps, ReactNode } from 'react';
 
-import { cn } from "@/shared/utils/cn";
+import { cn } from '@/shared/utils/cn';
 
 interface AuroraBackgroundProps extends HTMLProps<HTMLDivElement> {
   children: ReactNode;
@@ -11,7 +11,7 @@ interface AuroraBackgroundProps extends HTMLProps<HTMLDivElement> {
 const AuroraBackground = ({ className, children, showRadialGradient = true, ...props }: AuroraBackgroundProps) => {
   return (
     <main className="z-[500]">
-      <div className={cn("relative ", className)} {...props}>
+      <div className={cn('relative ', className)} {...props}>
         <div className="absolute inset-0 z-40 overflow-hidden">
           <div
             className={cn(

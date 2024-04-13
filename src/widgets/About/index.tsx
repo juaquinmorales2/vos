@@ -1,4 +1,4 @@
-'use server'
+'use client'
 import { FC } from 'react';
 import Image from 'next/image';
 
@@ -13,6 +13,7 @@ const Index: FC<Props> = () => {
       <div className="relative self-start px-20 pb-16 pt-10">
         <div className="flex space-x-16">
           <div className="relative h-[20vw] w-[30vw] grow-[3] basis-0">
+            {/* extracts image component as server */}
             <Image src="/images/hands_img.jpg" fill={true} objectFit="cover" alt="images image" />
           </div>
           <p className="grow-[4] basis-0 text-[2.4vw] font-medium text-text-1">

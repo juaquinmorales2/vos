@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import SectionTitle from '@/components/ui/SectionTitle';
 
-import { CARDS } from '@/data/cards';
+import { CARDS } from '@/data';
 
 interface Props {}
 

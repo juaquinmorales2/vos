@@ -10,6 +10,7 @@
     "format": "npx prettier --write ."
   },
   "dependencies": {
+    "@plaiceholder/next": "^3.0.0",
     "@studio-freight/lenis": "^1.0.42",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.8",

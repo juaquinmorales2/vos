@@ -14,7 +14,7 @@ export default function Home() {
       <About />
       <Services />
       <Approach />
-      <div className='h-[100vh] bg-bg-2'></div>
+      <div className="h-[100vh] bg-bg-2"></div>
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import { SVGProps, FC } from "react";
+import { SVGProps, FC } from 'react';
 
 export const First: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg width="32" height="33" viewBox="0 0 32 33" fill="none" {...props}>
@@ -7,4 +7,4 @@ export const First: FC<SVGProps<SVGSVGElement>> = (props) => (
   </svg>
 );
 
-export default First
+export default First;

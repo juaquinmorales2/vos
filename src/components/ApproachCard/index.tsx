@@ -1,20 +1,18 @@
 import { FC } from 'react';
 
 interface Props {
-  card: any
-};
+  card: any;
+}
 
 const Index: FC<Props> = ({ card }) => {
   return (
-    <div className={`px-5 py-6 space-y-6 border-2 border-stroke  mx-3 my-3 rounded-2xl min-w-[18vw] ${card.classes}`}>
-      <div className='flex space-x-4 items-center'>
+    <div className={`mx-3 my-3 min-w-[18vw] space-y-6 rounded-2xl  border-2 border-stroke px-5 py-6 ${card.classes}`}>
+      <div className="flex items-center space-x-4">
         {<card.icon />}
-        <h6 className='text-[1.6vw]'>{card.title}</h6>
+        <h6 className="text-[1.6vw]">{card.title}</h6>
       </div>
-      <p className='text-[1vw] font-light leading-[150%] '>
-        {card.description}
-      </p>
+      <p className="text-[1vw] font-light leading-[150%] ">{card.description}</p>
     </div>
-  )
+  );
 };
-export default Index
+export default Index;

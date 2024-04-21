@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { FC } from 'react';
 import Image from 'next/image';
 
@@ -8,7 +8,7 @@ interface Props {}
 
 const Index: FC<Props> = () => {
   return (
-    <section className="bg-gradient-to-b from-bg-2 to-bg-1">
+    <section id="about" className="bg-gradient-to-b from-bg-2 to-bg-1">
       <SectionTitle title="О НАС." classes="border-t border-gray-1 px-20 pt-10" />
       <div className="relative self-start px-20 pb-16 pt-10">
         <div className="flex space-x-16">

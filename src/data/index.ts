@@ -6,29 +6,29 @@ export const CARDS = [
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
     services: [
-      ['Веб страницы', 'Логотип'],
-      ['Веб приложения', 'Брендинг'],
+      ['Веб страницы', 'Мобильные'],
+      ['Мобильные приложения', 'Брендинг'],
     ],
     number: '01.',
     classes: '',
   },
   {
-    title: 'Разработка',
+    title: 'Веб разработка',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
     services: [
-      ['Веб страницы', 'Фулл стэк'],
+      ['Веб страницы', 'FullМобильные'],
       ['Веб приложений', 'Разработка API'],
     ],
     number: '02.',
     classes: ' border-t border-gray-1',
   },
   {
-    title: 'Дизайн2',
+    title: 'Мобильная разработка',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
     services: [
-      ['Веб страницы2', 'Логот2ип'],
+      ['Мобильные приложения', '12312'],
       ['Веб приложен2ия', 'Бре2ндинг'],
     ],
     number: '03.',

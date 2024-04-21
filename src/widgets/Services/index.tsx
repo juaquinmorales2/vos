@@ -8,7 +8,7 @@ interface Props {}
 
 const Index: FC<Props> = () => {
   return (
-    <section className="relative bg-bg-1 to-75%">
+    <section id="services" className="relative bg-bg-1 to-75%">
       <SectionTitle title="УСЛУГИ." classes="text-right border-t border-gray-1 px-20 pt-10" />
       {CARDS.map(({ title, services, description, number, classes }, i) => (
         <div key={number} className="px-20 pb-32 last:pb-48">

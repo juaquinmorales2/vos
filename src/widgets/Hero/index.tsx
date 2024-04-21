@@ -29,7 +29,7 @@ const Hero = () => {
 
   return (
     // <AuroraBg ref={ref3}>
-    <section className="relative bg-gradient-to-b from-bg-1 to-bg-2 ">
+    <section id="main" className="relative bg-gradient-to-b from-bg-1 to-bg-2 ">
       <div
         onMouseMove={(e) => manageMouseMove(e)}
         className="relative left-0 top-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden"

@@ -8,6 +8,7 @@ interface Props {}
 
 const Index: FC<Props> = () => {
   const [isActive, setIsActive] = useState(false);
+  const closeSidebar = () => setIsActive(false)
   return (
     <div>
       <div
@@ -22,7 +23,7 @@ const Index: FC<Props> = () => {
           <div className={`burger ${isActive && 'burgerActive'}`}></div>
         </button>
       </div>
-      <AnimatePresence mode="wait">{isActive && <SidebarMenu />}</AnimatePresence>
+      <AnimatePresence mode="wait">{isActive && <SidebarMenu close={closeSidebar} />}</AnimatePresence>
     </div>
   );
 };

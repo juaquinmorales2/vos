@@ -5,7 +5,9 @@ import Link from './Link';
 
 import { menuSlide } from '@/shared/utils/animations';
 
-interface Props {}
+interface Props {
+  close: () => void;
+}
 
 const navItems = [
   {
@@ -30,7 +32,7 @@ const navItems = [
   },
 ];
 
-const Index: FC<Props> = () => {
+const Index: FC<Props> = ({ close }) => {
   const [selectedIndicator, setSelectedIndicator] = useState(null);
   return (
     <>
@@ -52,7 +54,7 @@ const Index: FC<Props> = () => {
           ))}
         </div>
       </motion.div>
-      <div className="fixed bottom-0 left-0 right-0 top-0 z-[750] bg-bg-1/50 transition"></div>
+      <div aria-label="button" onClick={close} className="fixed bottom-0 left-0 right-0 top-0 z-[750] bg-bg-1/60 transition"></div>
     </>
   );
 };

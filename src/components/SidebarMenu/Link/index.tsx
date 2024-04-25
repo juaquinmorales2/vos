@@ -28,7 +28,7 @@ const Index: FC<Props> = ({ data, isActive, setSelectedIndicator }) => {
         variants={scale}
         animate={isActive ? 'open' : 'closed'}
       ></motion.div>
-      <Link className="text-[2.5vw] font-semibold transition hover:translate-x-[20px]" href={href}>
+      <Link className="text-[3vw] font-medium transition hover:translate-x-[20px]" href={href}>
         {title}
       </Link>
     </motion.div>

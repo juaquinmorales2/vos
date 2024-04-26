@@ -41,7 +41,7 @@ const Index: FC<Props> = ({ close }) => {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="fixed left-0 top-0 z-[4000] h-screen w-[30vw] bg-gray-1 px-[8vw] py-[8vw] text-text-1"
+        className="fixed left-0 top-0 z-[4000] h-screen w-[32vw] bg-gray-1 pt-[10vw] pr-[6vw] pb-[8vw] pl-[8vw] text-text-1"
       >
         <div className="flex flex-col justify-end space-y-2" onMouseLeave={() => setSelectedIndicator(null)}>
           {navItems.map((item, index) => (

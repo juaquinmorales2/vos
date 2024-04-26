@@ -3,8 +3,12 @@ import { First, Second, Third, Fourth, Fifth } from '@/icons/ApproachIcons';
 export const CARDS = [
   {
     title: 'Дизайн',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
+    description: [
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+      'Ipsam alias placeat temporibus mollitia doloribus.',
+      'Consequatur aperiam facilis culpa fuga quia! Labore,',
+      'sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
+    ],
     services: [
       ['Веб страницы', 'Мобильные'],
       ['Мобильные приложения', 'Брендинг'],
@@ -14,25 +18,33 @@ export const CARDS = [
   },
   {
     title: 'Веб разработка',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
+    description: [
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+      'Ipsam alias placeat temporibus mollitia doloribus.',
+      'Consequatur aperiam facilis culpa fuga quia! Labore,',
+      'sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
+    ],
     services: [
       ['Веб страницы', 'FullМобильные'],
       ['Веб приложений', 'Разработка API'],
     ],
     number: '02.',
-    classes: ' border-t border-gray-1',
+    classes: ' border-t border-gray-1/50',
   },
   {
     title: 'Мобильная разработка',
-    description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
+    description: [
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+      'Ipsam alias placeat temporibus mollitia doloribus.',
+      'Consequatur aperiam facilis culpa fuga quia! Labore,',
+      'sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
+    ],
     services: [
       ['Мобильные приложения', '12312'],
       ['Веб приложен2ия', 'Бре2ндинг'],
     ],
     number: '03.',
-    classes: 'border-t border-gray-1',
+    classes: 'border-t border-gray-1/50',
   },
 ];
 

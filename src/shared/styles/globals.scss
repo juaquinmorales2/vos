@@ -6,6 +6,10 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
+  &::selection {
+    @apply text-bg-1 bg-primary
+  }
 }
 
 html,

@@ -35,8 +35,7 @@ const Index: FC<Props> = ({ card: { title, services, description, number, classe
         </div>
 
         <div className="relative flex-1 text-[1.4]">
-          <PhraseAnimations phrases={description} inView={inView} classes='relative z-[2000] line-clamp-4 text-[1.5vw] font-medium leading-[170%]' />
-          {/* <p className="relative z-[2000] line-clamp-4 text-[1.5vw] font-medium leading-[170%]">{description}</p> */}
+          <p className="relative z-[2000] line-clamp-4 text-[1.5vw] font-medium leading-[170%]">{description}</p>
           <div className="absolute right-20 top-6 z-[1] text-right text-[16vw] font-extrabold tracking-[5%] text-gray-1">
             {number}
           </div>

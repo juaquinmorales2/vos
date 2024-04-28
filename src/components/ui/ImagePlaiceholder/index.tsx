@@ -12,7 +12,7 @@ const Index: FC<Props> = ({ src, inView }) => {
       fill={true}
       objectFit="cover"
       alt="image"
-      className={`blur-sm transition delay-700 ${inView && 'blur-none'}`}
+      className={`blur-sm transition delay-700 ${inView && '!blur-0'}`}
     />
   );
 };

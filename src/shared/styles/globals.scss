@@ -6,16 +6,22 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  
 
   &::selection {
     @apply text-bg-1 bg-primary
   }
+
 }
 
 html,
 body {
   font-family: 'Montserrat', sans-serif;
   @apply text-text-1;
+}
+
+html {
+  color-scheme: dark;
 }
 
 body {

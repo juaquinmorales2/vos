@@ -18,7 +18,7 @@ const Index: FC<Props> = () => {
       <div className=' w-full mx-auto max-w-[60vw] text-center flex flex-col flex-1 items-center justify-center'>
         <h3 className='text-[4vw] font-medium'>НАПИШИТЕ НАМ</h3>
         <p className='text-[1.7vw] text-gray-300 font-normal mt-2.5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident consequatur ullam veniam omnis dolores cum.</p>
-        <Button onClick={handleFormToggle} title='ОСТАВИТЬ ЗАЯВКУ' classes='px-6 py-8 w-[30vw] text-[1.25vw] bg-bg-1 hover:bg-bg-1/80' btnClasses='mt-4' />
+        <Button onClick={handleFormToggle} title='ОСТАВИТЬ ЗАЯВКУ' classes='px-6 py-8 w-[30vw] min-h-[6vw] text-[1.25vw] bg-bg-1 hover:bg-bg-1/80' btnClasses='mt-4' />
 
       </div>
 

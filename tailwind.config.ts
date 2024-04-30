@@ -21,6 +21,8 @@ module.exports = {
       animation: {
         spotlight: 'spotlight 2s ease .75s 1 forwards',
         aurora: 'aurora 60s linear infinite',
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
 
       keyframes: {
@@ -34,6 +36,14 @@ module.exports = {
             transform: 'translate(-50%,-40%) scale(1)',
           },
         },
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
         aurora: {
           from: {
             backgroundPosition: '50% 50%, 50% 50%',
@@ -45,7 +55,7 @@ module.exports = {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors, require('tailwindcss-animate')],
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).

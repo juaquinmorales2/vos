@@ -28,7 +28,6 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
-    // <AuroraBg ref={ref3}>
     <section id="main" className="relative bg-gradient-to-b from-bg-1 to-bg-2 ">
       <div
         onMouseMove={(e) => manageMouseMove(e)}
@@ -59,7 +58,6 @@ const Hero = () => {
         </div>
       </div>
     </section>
-    //</AuroraBg>
   );
 };
 export default Hero;

@@ -3,6 +3,7 @@ import { FC, useState } from 'react';
 
 import Button from '@/components/ui/Button'
 import { INPUT_FIELDS, RADIO_FIELDS } from '@/data';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/RadioGroup';
 
 interface Props { };
 
@@ -25,18 +26,21 @@ const Index: FC<Props> = () => {
   const [form, setForm] = useState(defaultState)
 
   return (
-    <section className='bg-bg-1 w-full py-10 min-h-screen opacity-100 z-[5000]'>
-      <div className="max-w-[70vw] px-32 mx-auto">
+    <div className="max-w-[70vw] px-[10vw] mx-auto">
         <h1 className='text-center font-bold text-[3.5vw] mb-[1.25vw] leading-[100%]'>hello world</h1>
         <form className="h-full flex flex-col items-center">
           <div className='flex flex-wrap'>
+
             {RADIO_FIELDS.map(item => (
-              <div key={item.title} className={`inline-block w-[calc(50%-16px)] mb-[1.75vw] ${item.classes}`}>
+              <RadioGroup onValueChange={(value) => console.log(value)} key={item.title} className={`inline-block w-[calc(50%-16px)] mb-[1.75vw] ${item.classes}`}>
                 <h4 className='text-[1.3vw] font-semibold mb-[0.2vw] max-w-[80%]'>{item.title}</h4>
                 {item.radioArray.map(radio => (
-                  <p className='text-[1vw] leading-[2vw]' key={radio.value}>{radio.name}</p>
+                  <div key={radio.value} className="flex items-center space-x-2">
+                    <RadioGroupItem value={radio.value} id={radio.name} />
+                    <label htmlFor={radio.name} className='text-[1vw] leading-[1.75vw]'>{radio.name}</label>
+                  </div>
                 ))}
-              </div>
+              </RadioGroup>
             ))}
 
             <div className='w-full space-y-6'>
@@ -52,12 +56,10 @@ const Index: FC<Props> = () => {
               </div>
             </div>
 
-            <Button title='отправить' classes="py-[10px] px-12 text-[1.1vw] bg-bg-1/90 hover:bg-bg-1/80" btnClasses='p-[1px] capitalize self-start !mt-4' />
+          <Button title='отправить' classes="py-[10px] px-12 text-[1.1vw] bg-bg-1/90 hover:bg-bg-1/80" btnClasses='p-[2px] capitalize self-start !mt-4' />
           </div>
         </form>
-      </div>
-      {/* </div> */}
-    </section>
+    </div>
 
   )
 };

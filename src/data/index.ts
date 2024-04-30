@@ -70,7 +70,7 @@ export const APPROACH_CARDS = [
     title: 'Готовая работа (?)',
     description:
       'Browse through the icons below to find the one you need. The search field supports synonyms—for example, try searching for hamburger or logout.',
-    classes: 'col-span-2 bg-[#fff]/5',
+    classes: 'col-span-2 bg-[#fff]/5 hover:bg-[#fff]/5',
   },
 ];
 

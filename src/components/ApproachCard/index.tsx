@@ -6,7 +6,9 @@ interface Props {
 
 const Index: FC<Props> = ({ card }) => {
   return (
-    <div className={`mx-3 my-3 min-w-[18vw] space-y-6 rounded-2xl  border-2 border-stroke hover:bg-stroke/10 last:hover:bg- transition px-5 py-6 ${card.classes}`}>
+    <div
+      className={`mx-3 my-3 min-w-[18vw] space-y-6 rounded-2xl border-2 border-stroke px-5 py-6 transition hover:bg-stroke/10 ${card.classes}`}
+    >
       <div className="flex items-center space-x-4">
         {<card.icon />}
         <h6 className="text-[1.6vw]">{card.title}</h6>

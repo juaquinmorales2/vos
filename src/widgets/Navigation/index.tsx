@@ -8,17 +8,14 @@ interface Props {}
 
 const Index: FC<Props> = () => {
   const [isActive, setIsActive] = useState(false);
-  const closeSidebar = () => setIsActive(false)
+  const closeSidebar = () => setIsActive(false);
   return (
     <div>
-      <div
-        className="fixed left-0 z-[4001]
-      p-[2vw]"
-      >
+      <div className="fixed left-0 z-[4001] p-[2vw]">
         <button
           type="button"
           onClick={() => setIsActive(!isActive)}
-          className="flex h-[4.5vw] w-[4.5vw] cursor-pointer items-center justify-center rounded-full bg-primary"
+          className="flex h-[4.5vw] w-[4.5vw] cursor-pointer items-center justify-center rounded-full bg-stone-400"
         >
           <div className={`burger ${isActive && 'burgerActive'}`}></div>
         </button>

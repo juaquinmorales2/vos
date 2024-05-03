@@ -1,14 +1,11 @@
 import { FC } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import PhraseAnimations from '@/components/ui/PhraseAnimations'
-
 interface Props {
-  card: any
-};
+  card: any;
+}
 
 const Index: FC<Props> = ({ card: { title, services, description, number, classes } }) => {
-
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.6,
@@ -42,6 +39,6 @@ const Index: FC<Props> = ({ card: { title, services, description, number, classe
         </div>
       </div>
     </div>
-  )
+  );
 };
-export default Index
+export default Index;

@@ -1,14 +1,14 @@
 import { FC } from 'react';
 
-import BookForm from '@/widgets/BookForm'
+import BookForm from '@/widgets/BookForm';
 
-interface Props { };
+interface Props {}
 
 const Index: FC<Props> = () => {
   return (
-    <section className='bg-bg-1 w-full py-10 min-h-screen opacity-100 z-[5000]'>
+    <section className="z-[5000] min-h-screen w-full bg-bg-1 py-10 opacity-100">
       <BookForm />
     </section>
-  )
+  );
 };
-export default Index
+export default Index;

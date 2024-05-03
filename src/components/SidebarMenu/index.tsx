@@ -41,7 +41,7 @@ const Index: FC<Props> = ({ close }) => {
         initial="initial"
         animate="enter"
         exit="exit"
-        className="fixed left-0 top-0 z-[4000] h-screen w-[32vw] bg-gray-1 pt-[10vw] pr-[6vw] pb-[8vw] pl-[8vw] text-text-1"
+        className="fixed left-0 top-0 z-[4000] h-screen w-[32vw] bg-gray-1 pb-[8vw] pl-[8vw] pr-[6vw] pt-[10vw] text-text-1"
       >
         <div className="flex flex-col justify-end space-y-2" onMouseLeave={() => setSelectedIndicator(null)}>
           {navItems.map((item, index) => (
@@ -54,7 +54,11 @@ const Index: FC<Props> = ({ close }) => {
           ))}
         </div>
       </motion.div>
-      <div aria-label="button" onClick={close} className="fixed bottom-0 left-0 right-0 top-0 z-[750] bg-bg-1/60 transition"></div>
+      <div
+        aria-label="button"
+        onClick={close}
+        className="fixed bottom-0 left-0 right-0 top-0 z-[750] bg-bg-1/60 transition"
+      ></div>
     </>
   );
 };

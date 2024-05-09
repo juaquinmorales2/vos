@@ -54,7 +54,6 @@ a {
   }
 }
 //navigation
-
 .burger {
   width: 100%;
   &::after,
@@ -88,4 +87,15 @@ a {
     transform: rotate(-45deg);
     top: 0px;
   }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

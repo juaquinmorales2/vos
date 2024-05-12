@@ -124,7 +124,7 @@ export const RADIO_FIELDS = [
 
 export const INPUT_FIELDS = [
   { label: 'Выше имя', name: 'first', classes: 'inline-block !w-[calc(50%-16px)] mr-8', required: true },
-  { label: 'Ваш номер', name: 'last', classes: 'inline-block !w-[calc(50%-16px)]', type: 'number', required: true },
+  { label: 'Ваш номер', name: 'phone', classes: 'inline-block !w-[calc(50%-16px)]', type: 'number', required: true },
   { label: 'Email', name: 'email', classes: '', type: 'email' },
   { label: 'Название компании', name: 'company', classes: '', required: true },
   { label: 'Ссылка на сайт', name: 'websiteUrl', classes: '' },
@@ -137,7 +137,7 @@ export const BOOK_FORM_DEFAULT_STATE = {
   _quickness: null,
 
   first: '',
-  last: '',
+  phone: '',
   email: '',
   company: '',
   websiteUrl: '',

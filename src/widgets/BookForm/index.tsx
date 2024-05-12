@@ -2,6 +2,8 @@
 import { useRouter } from 'next/navigation';
 import { FC, FormEvent, useState } from 'react';
 
+import { supabase } from '@/lib/supabase';
+
 import { BOOK_FORM_DEFAULT_STATE, INPUT_FIELDS, RADIO_FIELDS } from '@/data';
 
 //components
@@ -15,16 +17,23 @@ const Index: FC<Props> = () => {
 
   const { push } = useRouter()
 
-  const submit = (e: FormEvent<HTMLFormElement>) => {
+  const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log('submit form', form)
+    if (form._budget && form._pages && form._quickness && form._service) {
+      //better use zod fornm valudation
+    }
+    const { data, error, status, count, statusText } = await supabase.from('agncy_requests').insert(form)
+    if (status === 201) {
+      // perform modal window with redirect
+      //  add snackbar as form validation
+    }
   }
   return (
     <div className="mx-auto max-w-[70vw] px-[10vw]">
       <div className='relative'>
         <button className=' p-[0.5vw] box-content rounded-full bg-stone-800 hover:bg-stone-800 group absolute z-10 top-[25%] left-0' onClick={() => push('/')}>
-          <svg focusable="false" className='w-[2vw] h-[2vw] fill-stone-400 group-hover:fill-stone-300 transition' viewBox="0 0 24 24" data-testid="ArrowBackOutlinedIcon" aria-label="fontSize medium"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"></path></svg>
-          {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24} fill="#f2f" stroke="#22f"><path fill="#f2f" stroke="#22f" d="M244 400L100 256l144-144M120 256h292" /></svg> */}
+          <svg focusable="false" className='w-[1.5vw] h-[1.5vw] fill-stone-400 group-hover:fill-stone-300 transition' viewBox="0 0 24 24" data-testid="ArrowBackOutlinedIcon" aria-label="fontSize medium"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"></path></svg>
         </button>
         <h1 className="mb-[1.75vw] text-center text-[3.5vw] font-bold leading-[100%]">Оставить заявку</h1>
       </div>

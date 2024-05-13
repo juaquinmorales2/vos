@@ -12,6 +12,7 @@
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
     "@radix-ui/react-radio-group": "^1.1.3",
+    "@radix-ui/react-toast": "^1.1.5",
     "@studio-freight/lenis": "^1.0.42",
     "@supabase/supabase-js": "^2.43.1",
     "class-variance-authority": "^0.7.0",

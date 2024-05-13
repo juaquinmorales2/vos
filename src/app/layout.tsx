@@ -1,12 +1,16 @@
 'use client';
 
-import '@/shared/styles/globals.scss';
 import Lenis from '@studio-freight/lenis';
+
+import { Toaster } from '@/components/ui/Toast/toaster';
 
 import { Montserrat } from 'next/font/google';
 import { useEffect, useState } from 'react';
 
 const montserrat = Montserrat({ subsets: ['latin'] });
+
+import '@/shared/styles/globals.scss';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,7 +38,12 @@ export default function RootLayout({
   }, []);
   return (
     <html lang="ru">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <main>
+          {children}
+          <Toaster />
+        </main>
+      </body>
     </html>
   );
 }

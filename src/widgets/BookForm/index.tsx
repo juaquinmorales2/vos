@@ -9,11 +9,13 @@ import { BOOK_FORM_DEFAULT_STATE, INPUT_FIELDS, RADIO_FIELDS } from '@/data';
 //components
 import Button from '@/components/ui/Button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/RadioGroup';
+import { useToast } from '@/components/ui/Toast/use-toast';
 
 interface Props {}
 
 const Index: FC<Props> = () => {
   const [form, setForm] = useState(BOOK_FORM_DEFAULT_STATE);
+  const { toast } = useToast()
 
   const { push } = useRouter()
 
@@ -23,15 +25,19 @@ const Index: FC<Props> = () => {
     if (form._budget && form._pages && form._quickness && form._service) {
       //better use zod fornm valudation
     }
-    const { data, error, status, count, statusText } = await supabase.from('agncy_requests').insert(form)
+    const { status } = await supabase.from('agncy_requests').insert(form)
     if (status === 201) {
-      // perform modal window with redirect
-      //  add snackbar as form validation
+      toast({ title: 'hello world', description: "ehehhehe" })
     }
+  }
+  const test = () => {
+    toast({ title: 'hello world', description: "ehehhehe" })
+
   }
   return (
     <div className="mx-auto max-w-[70vw] px-[10vw]">
       <div className='relative'>
+        <button onClick={test}>test</button>
         <button className=' p-[0.5vw] box-content rounded-full bg-stone-800 hover:bg-stone-800 group absolute z-10 top-[25%] left-0' onClick={() => push('/')}>
           <svg focusable="false" className='w-[1.5vw] h-[1.5vw] fill-stone-400 group-hover:fill-stone-300 transition' viewBox="0 0 24 24" data-testid="ArrowBackOutlinedIcon" aria-label="fontSize medium"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"></path></svg>
         </button>

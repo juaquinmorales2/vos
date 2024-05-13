@@ -9,14 +9,13 @@ import CallToAction from '@/widgets/CallToAction';
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Navigation />
       <Hero />
       <About />
       <Services />
       <Approach />
       <CallToAction />
-      {/* <div className="h-[100vh] bg-bg-2"></div> */}
-    </main>
+    </>
   );
 }

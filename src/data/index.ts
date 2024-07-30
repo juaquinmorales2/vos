@@ -6,19 +6,19 @@ export const CARDS = [
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
     services: [
-      ['Веб страницы', 'Мобильные'],
-      ['Мобильные приложения', 'Брендинг'],
+      ['Веб страниц', 'Брендинг'],
+      ['Мобильные приложения', 'Лого'],
     ],
     number: '01.',
     classes: '',
   },
   {
-    title: 'Веб разработка',
+    title: 'Фулстек разработка',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
     services: [
-      ['Веб страницы', 'FullМобильные'],
-      ['Веб приложений', 'Разработка API'],
+      ['Онлайн магазин', 'Веб приложения'],
+      ['CMS', 'Разработка API'],
     ],
     number: '02.',
     classes: ' border-t border-gray-1/50',
@@ -27,10 +27,7 @@ export const CARDS = [
     title: 'Мобильная разработка',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
-    services: [
-      ['Мобильные приложения', '12312'],
-      ['Веб приложен2ия', 'Бре2ндинг'],
-    ],
+    services: [['Android', 'IOS']],
     number: '03.',
     classes: 'border-t border-gray-1/50',
   },
@@ -41,35 +38,33 @@ export const APPROACH_CARDS = [
     icon: First,
     title: 'Консультация',
     description:
-      'Browse through the icons below to find the one you need. The search field supports synonyms—for example, try searching for hamburger or logout.',
+      'Мы внимательно выслушиваем пожелания и представления заказчика о проекте. Затем делимся своим видением и, на основе этого обмена, приходим к общему соглашению.',
     classes: '',
   },
   {
     icon: Second,
     title: 'Совместный обзор',
     description:
-      'Browse through the icons below to find the one you need. The search field supports synonyms—for example, try searching for hamburger or logout.',
+      'Затем приступаем к созданию дизайна. После завершения проводим совместный обзор, где заказчик, при желании может внести изменения.',
     classes: '',
   },
   {
     icon: Third,
     title: 'Разработка',
-    description:
-      'Browse through the icons below to find the one you need. The search field supports synonyms—for example, try searching for hamburger or logout.',
+    description: 'После утверждения дизайна, мы приступаем к непосредственной разработке продукта.',
     classes: '',
   },
   {
     icon: Fourth,
     title: 'Тестирование',
     description:
-      'Browse through the icons below to find the one you need. The search field supports synonyms—for example, try searching for hamburger or logout.',
+      'По завершении разработки тщательно тестируем каждый компонент продукта. Затем приглашаем заказчика для пользовательского тестирования.',
     classes: '',
   },
   {
     icon: Fifth,
-    title: 'Готовая работа (?)',
-    description:
-      'Browse through the icons below to find the one you need. The search field supports synonyms—for example, try searching for hamburger or logout.',
+    title: 'Финальный результат',
+    description: 'Готовый продукт, который ...',
     classes: 'col-span-2 bg-[#fff]/5 hover:bg-[#fff]/5',
   },
 ];

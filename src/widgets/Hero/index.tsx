@@ -41,8 +41,7 @@ const Hero = () => {
           СОЗДАЕМ УНИКАЛЬНОСТЬ
         </motion.h1>
         <motion.h2 ref={heading2} className="z-20 text-[1.7vw] font-medium text-text-1/75" style={{ opacity }}>
-          {/* Креативное агенство из Туркменистана */}
-          Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+          Креативное агенство из Туркменистана
         </motion.h2>
         <div ref={ref1} className={`absolute left-0 top-0 z-10 h-full w-full`}>
           <Image src={main_1} fill={true} alt="" objectFit="cover" />

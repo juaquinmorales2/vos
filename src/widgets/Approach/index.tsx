@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
 import SectionTitle from '@/components/ui/SectionTitle';
-import ApproachCard from '@/components/ApproachCard';
 import SectionOpacity from '@/components/ui/SectionOpacity';
+import HoverCards from '@/components/ui/HoverCards';
 
 import { APPROACH_CARDS } from '@/data';
 
@@ -14,11 +14,7 @@ const Index: FC<Props> = () => {
       <SectionOpacity>
         <SectionTitle title="ПОДХОД." classes="px-[5vw] pt-[2.5vw] top-0 bg-bg-1 z-20" />
         <div className="px-[5vw] pt-[2.5vw]">
-          <div className="mx-[-12px] grid grid-cols-3">
-            {APPROACH_CARDS.map((card) => (
-              <ApproachCard key={card.title} card={card} />
-            ))}
-          </div>
+          <HoverCards cards={APPROACH_CARDS} />
         </div>
       </SectionOpacity>
     </section>

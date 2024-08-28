@@ -15,31 +15,43 @@ interface Props {}
 
 const Index: FC<Props> = () => {
   const [form, setForm] = useState(BOOK_FORM_DEFAULT_STATE);
-  const { toast } = useToast()
+  const { toast } = useToast();
 
-  const { push } = useRouter()
+  const { push } = useRouter();
 
   const submit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    console.log('submit form', form)
+    e.preventDefault();
+    console.log('submit form', form);
     if (form._budget && form._pages && form._quickness && form._service) {
       //better use zod fornm valudation
     }
-    const { status } = await supabase.from('agncy_requests').insert(form)
+    const { status } = await supabase.from('agncy_requests').insert(form);
     if (status === 201) {
-      toast({ title: 'hello world', description: "ehehhehe" })
+      toast({ title: 'success message', description: 'ehehhehe' });
+    } else {
+      toast({ title: 'please, call us', description: 'ehehhehe', duration: 6000 });
     }
-  }
+  };
   const test = () => {
-    toast({ title: 'hello world', description: "ehehhehe" })
-
-  }
+    toast({ title: 'hello world', description: 'ehehhehe' });
+  };
   return (
     <div className="mx-auto max-w-[70vw] px-[10vw]">
-      <div className='relative'>
+      <div className="relative">
         <button onClick={test}>test</button>
-        <button className=' p-[0.5vw] box-content rounded-full bg-stone-800 hover:bg-stone-800 group absolute z-10 top-[25%] left-0' onClick={() => push('/')}>
-          <svg focusable="false" className='w-[1.5vw] h-[1.5vw] fill-stone-400 group-hover:fill-stone-300 transition' viewBox="0 0 24 24" data-testid="ArrowBackOutlinedIcon" aria-label="fontSize medium"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"></path></svg>
+        <button
+          className=" group absolute left-0 top-[25%] z-10 box-content rounded-full bg-stone-800 p-[0.5vw] hover:bg-stone-800"
+          onClick={() => push('/')}
+        >
+          <svg
+            focusable="false"
+            className="h-[1.5vw] w-[1.5vw] fill-stone-400 transition group-hover:fill-stone-300"
+            viewBox="0 0 24 24"
+            data-testid="ArrowBackOutlinedIcon"
+            aria-label="fontSize medium"
+          >
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"></path>
+          </svg>
         </button>
         <h1 className="mb-[1.75vw] text-center text-[3.5vw] font-bold leading-[100%]">Оставить заявку</h1>
       </div>
@@ -47,7 +59,7 @@ const Index: FC<Props> = () => {
         <div className="flex flex-wrap">
           {RADIO_FIELDS.map((item) => (
             <RadioGroup
-              onValueChange={(value) => setForm(prev => ({ ...prev, [item.formKey]: value }))}
+              onValueChange={(value) => setForm((prev) => ({ ...prev, [item.formKey]: value }))}
               key={item.title}
               className={`mb-[1.75vw] inline-block w-[calc(50%-16px)] ${item.classes}`}
               required={true}
@@ -71,23 +83,23 @@ const Index: FC<Props> = () => {
                   {item.label}
                 </label>
                 <input
-                  onChange={({ target: { name, value } }) => setForm(prev => ({ ...prev, [name]: value }))}
+                  onChange={({ target: { name, value } }) => setForm((prev) => ({ ...prev, [name]: value }))}
                   type={item.type || 'text'}
                   name={item.name}
                   id={item.label}
-                  className="w-full rounded-sm border border-primary/80 bg-transparent px-[1vw] py-[0.8vw] h-[3vw] appearance-none"
+                  className="h-[3vw] w-full appearance-none rounded-sm border border-primary/80 bg-transparent px-[1vw] py-[0.8vw]"
                   required={item.required}
                 />
               </div>
             ))}
             <div className="w-full">
-              <label className="requiredd" htmlFor="message" >
+              <label className="requiredd" htmlFor="message">
                 Расскажите о вашем проекте
               </label>
               <textarea
                 minLength={20}
                 maxLength={500}
-                onChange={({ target: { name, value } }) => setForm(prev => ({ ...prev, [name]: value }))}
+                onChange={({ target: { name, value } }) => setForm((prev) => ({ ...prev, [name]: value }))}
                 id="message"
                 name="message"
                 className="min-h-[10vw] w-full resize-none rounded-sm border border-primary/80 bg-transparent px-3 py-2"

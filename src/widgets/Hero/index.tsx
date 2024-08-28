@@ -2,13 +2,12 @@
 import { useRef } from 'react';
 import Image from 'next/image';
 
-import AuroraBg from '@/components/ui/AuroraBg';
-
 import useFloatingImages from '@/composables/useFloatingImages';
 
 import { useScroll, useTransform, motion } from 'framer-motion';
 
 import { main_1, main_2, main_3 } from './images/index';
+import ShootingStars from '@/components/ui/ShootingStars';
 
 const Hero = () => {
   const ref1 = useRef(null);
@@ -28,8 +27,6 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
-    // <AuroraBg>
-
     <section id="main" className="relative bg-gradient-to-b from-bg-1 to-bg-2 ">
       <div
         onMouseMove={(e) => manageMouseMove(e)}
@@ -37,7 +34,7 @@ const Hero = () => {
       >
         <motion.h1
           ref={heading1}
-          className="relative z-20 mt-[-60px] w-full text-center text-[4.5vw] font-extrabold text-text-1"
+          className="relative z-20 mt-[-5vw] w-full text-center text-[4.5vw] font-extrabold text-text-1"
           style={{ opacity }}
         >
           СОЗДАЕМ УНИКАЛЬНОСТЬ
@@ -58,9 +55,8 @@ const Hero = () => {
           <Image src={main_3} fill={true} alt="" objectFit="cover" />
         </div>
       </div>
+      <ShootingStars />
     </section>
-    {/* </AuroraBg> */ }
-
   );
 };
 export default Hero;

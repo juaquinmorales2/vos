@@ -10,9 +10,9 @@ interface Props {}
 
 const Index: FC<Props> = () => {
   return (
-    <section id="services" className="relative border-t border-gray-1 bg-bg-1 to-75% py-20">
+    <section id="services" className="relative border-t border-gray-1 bg-bg-1 to-75% py-[6vw]">
       <SectionOpacity offset={['end 2', 'start 1']}>
-        <SectionTitle title="УСЛУГИ." classes="text-right  px-20 pt-10" />
+        <SectionTitle title="УСЛУГИ." classes="text-right  px-[6vw] pt-[3vw]" />
         {CARDS.map((card) => (
           <ServiceCard key={card.title} card={card} />
         ))}

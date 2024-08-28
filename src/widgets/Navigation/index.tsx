@@ -9,6 +9,7 @@ interface Props {}
 const Index: FC<Props> = () => {
   const [isActive, setIsActive] = useState(false);
   const closeSidebar = () => setIsActive(false);
+
   return (
     <div>
       <div className="fixed left-0 z-[4001] p-[2vw]">

@@ -12,28 +12,34 @@ interface Props {
 const navItems = [
   {
     title: 'Главная',
-    href: '#main',
+    href: 'main',
   },
   {
     title: 'О нас',
-    href: '#about',
+    href: 'about',
   },
   {
     title: 'Услуги',
-    href: '#services',
+    href: 'services',
   },
   {
     title: 'Подход',
-    href: '#approach',
+    href: 'approach',
   },
   {
     title: 'Связаться',
-    href: '#contact',
+    href: 'contact',
   },
 ];
 
 const Index: FC<Props> = ({ close }) => {
   const [selectedIndicator, setSelectedIndicator] = useState(null);
+
+  const smoothScroll = (id: string) => {
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: 'smooth' });
+    close();
+  };
   return (
     <>
       <motion.div
@@ -46,6 +52,7 @@ const Index: FC<Props> = ({ close }) => {
         <div className="flex flex-col justify-end space-y-2" onMouseLeave={() => setSelectedIndicator(null)}>
           {navItems.map((item, index) => (
             <Link
+              handleClick={() => smoothScroll(item.href)}
               key={item.title}
               data={{ ...item, index }}
               isActive={selectedIndicator === item.href}

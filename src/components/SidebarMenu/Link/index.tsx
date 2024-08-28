@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { slide, scale } from '@/shared/utils/animations';
 
@@ -8,9 +7,10 @@ interface Props {
   data: any;
   isActive: boolean;
   setSelectedIndicator: any;
+  handleClick: () => void;
 }
 
-const Index: FC<Props> = ({ data, isActive, setSelectedIndicator }) => {
+const Index: FC<Props> = ({ data, isActive, setSelectedIndicator, handleClick }) => {
   const { title, href, index } = data;
 
   return (
@@ -22,15 +22,16 @@ const Index: FC<Props> = ({ data, isActive, setSelectedIndicator }) => {
       initial="initial"
       animate="enter"
       exit="exit"
+      onClick={handleClick}
     >
       <motion.div
         className="absolute -left-4 inline-block h-2.5 w-2.5 space-y-3 rounded-full bg-white"
         variants={scale}
         animate={isActive ? 'open' : 'closed'}
       ></motion.div>
-      <Link className="text-[3vw] font-medium transition hover:translate-x-[20px]" href={href}>
+      <div className="cursor-pointer text-[2.5vw] font-medium tracking-wide transition hover:translate-x-[20px]">
         {title}
-      </Link>
+      </div>
     </motion.div>
   );
 };

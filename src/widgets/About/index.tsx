@@ -19,7 +19,7 @@ const Index: FC<Props> = () => {
             </p>
 
             <div className="relative h-[20vw] w-[30vw] grow-[3] basis-0 bg-bg-2">
-              <Image src="/images/hands_img.jpg" fill={true} objectFit="cover" alt="image" className="rounded-sm" />;
+              <img src="/images/hands_img.jpg" alt="image" className="rounded-sm hover:brightness-110 transition absolute inset-0 w-full h-full" />;
             </div>
           </div>
         </div>

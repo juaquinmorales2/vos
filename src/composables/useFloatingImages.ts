@@ -26,16 +26,16 @@ const useFloatingImages = (ref1: any, ref2: any, ref3: any) => {
     xForce = lerp(xForce, 0, easing);
     yForce = lerp(yForce, 0, easing);
     gsap.set(ref1.current, {
-      x: `+=${xForce * 0.25}`,
-      y: `+=${yForce * 0.25}`,
+      x: `+=${xForce * 0.2}`,
+      y: `+=${yForce * 0.2}`,
     });
     gsap.set(ref2.current, {
-      x: `+=${xForce * 0.5}`,
-      y: `+=${yForce * 0.5}`,
+      x: `+=${xForce * 0.6}`,
+      y: `+=${yForce * 0.6}`,
     });
     gsap.set(ref3.current, {
-      x: `+=${xForce * 0.1}`,
-      y: `+=${yForce * 0.1}`,
+      x: `+=${xForce * 0.15}`,
+      y: `+=${yForce * 0.15}`,
     });
 
     if (Math.abs(xForce) < 0.01) xForce = 0;

@@ -60,20 +60,20 @@ a {
   &::before {
     content: '';
     display: block;
-    height: 2px;
+    height: 0.2vw;
     width: 40%;
     margin: auto;
-    background-color: #202020;
+    background-color: #404040;
     position: relative;
     transition: transform 0.3s;
   }
 
   &::after {
-    top: -5px;
+    top: -0.3vw;
   }
 
   &::before {
-    top: 5px;
+    top: 0.3vw;
   }
 }
 

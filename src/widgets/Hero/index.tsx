@@ -28,7 +28,7 @@ const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
-    <section id="main" className="relative bg-gradient-to-b from-bg-1 to-bg-2 ">
+    <section id="main" className="relative bg-gradient-to-b  ">
       <div
         onMouseMove={(e) => manageMouseMove(e)}
         className="relative left-0 top-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden"

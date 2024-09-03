@@ -6,7 +6,7 @@ import About from '@/widgets/About';
 import Services from '@/widgets/Services';
 import Approach from '@/widgets/Approach';
 import CallToAction from '@/widgets/CallToAction';
-import CanvasCursor from '@/components/ui/CanvasCursor';
+import ShadowCursor from '@/components/ui/ShadowCursor'
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <Services />
       <Approach />
       <CallToAction />
-
+      <ShadowCursor />
       {/* <CanvasCursor /> */}
     </>
   );

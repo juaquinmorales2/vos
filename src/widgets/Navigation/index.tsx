@@ -20,7 +20,7 @@ const Index: FC<Props> = () => {
           <div className={`burger ${isActive && 'burgerActive'}`}></div>
         </button>
       </div>
-      <button title="Team name" className="p-[2vw] fixed z-[100] top-0 left-0 group">
+      <button title="Akym_dev?" className="p-[2vw] fixed z-[100] top-0 left-0 group">
         <LogoIcon className="w-[5vw] h-[5vw] group-hover:text-white/80 transition duration-300" />
       </button>
       <AnimatePresence mode="wait">{isActive && <SidebarMenu close={closeSidebar} />}</AnimatePresence>

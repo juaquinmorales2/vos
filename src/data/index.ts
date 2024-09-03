@@ -21,7 +21,7 @@ export const CARDS = [
       ['CMS', 'Разработка API'],
     ],
     number: '02.',
-    classes: ' border-t border-gray-1/50',
+    classes: 'border-t border-gray-1/50',
   },
   {
     title: 'Мобильная разработка',

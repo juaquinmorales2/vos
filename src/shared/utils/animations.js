@@ -13,6 +13,6 @@ export const slide = {
 };
 
 export const scale = {
-  open: { scale: 1, transition: { duration: 0.3 } },
+  open: { scale: 1, transition: { duration: 0.3, delay: 0.1 } },
   closed: { scale: 0, transition: { duration: 0.4 } },
 };

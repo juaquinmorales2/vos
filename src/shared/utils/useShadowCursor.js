@@ -8,21 +8,41 @@ const useShadowCursor = () => {
   const canvas = document.getElementById('fluid');
   resizeCanvas();
 
+  // let config = {
+  //   SIM_RESOLUTION: 128,
+  //   DYE_RESOLUTION: 1440,
+  //   CAPTURE_RESOLUTION: 512,
+  //   DENSITY_DISSIPATION: 3.5,
+  //   VELOCITY_DISSIPATION: 2,
+  //   PRESSURE: 0.1,
+  //   PRESSURE_ITERATIONS: 20,
+  //   CURL: 3,
+  //   SPLAT_RADIUS: 0.2,
+  //   SPLAT_FORCE: 6000,
+  //   SHADING: true,
+  //   COLOR_UPDATE_SPEED: 10,
+  //   PAUSED: false,
+  //   BACK_COLOR: { r: 0.5, g: 0, b: 0 },
+  //   TRANSPARENT: true,
+  // };
+
   let config = {
     SIM_RESOLUTION: 128,
     DYE_RESOLUTION: 1440,
     CAPTURE_RESOLUTION: 512,
+
     DENSITY_DISSIPATION: 3.5,
-    VELOCITY_DISSIPATION: 2,
+    VELOCITY_DISSIPATION: 1.5,
     PRESSURE: 0.1,
     PRESSURE_ITERATIONS: 20,
     CURL: 3,
-    SPLAT_RADIUS: 0.2,
-    SPLAT_FORCE: 6000,
+    SPLAT_RADIUS: 0.6,
+    SPLAT_FORCE: 6500,
     SHADING: true,
+    // COLOR_UPDATE_SPEED: 1000,
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
-    BACK_COLOR: { r: 0.5, g: 0, b: 0 },
+    BACK_COLOR: { r: 0, g: 0, b: 0 },
     TRANSPARENT: true,
   };
 
@@ -36,7 +56,7 @@ const useShadowCursor = () => {
     this.deltaY = 0;
     this.down = false;
     this.moved = false;
-    this.color = [30, 0, 300];
+    this.color = [0, 0, 0];
   }
 
   let pointers = [];
@@ -45,7 +65,7 @@ const useShadowCursor = () => {
   const { gl, ext } = getWebGLContext(canvas);
 
   if (!ext.supportLinearFiltering) {
-    config.DYE_RESOLUTION = 512;
+    config.DYE_RESOLUTION = 256;
     config.SHADING = false;
   }
 

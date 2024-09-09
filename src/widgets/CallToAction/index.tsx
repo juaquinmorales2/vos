@@ -15,6 +15,7 @@ const Index: FC<Props> = () => {
 
   return (
     <SectionOpacity classes="flex flex-col justify-center h-screen ">
+
       <div className=" mx-auto flex w-full max-w-[60vw] flex-1 flex-col items-center justify-center text-center">
         <h3 className="text-[4vw] font-medium">НАПИШИТЕ НАМ</h3>
         <p className="mt-[0.6vw] text-[1.7vw] font-normal text-gray-300">

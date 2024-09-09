@@ -46,7 +46,6 @@ const Hero = () => {
         <div ref={ref1} className={`absolute left-0 top-0 z-10 h-full w-full`}>
           <Image src={main_1} fill={true} alt="" objectFit="cover" />
         </div>
-        {/* <Spotlight className="left-[15%]" fill="#fff" /> */}
 
         <div ref={ref2} className={`absolute left-0 top-0 h-full w-full scale-[1.15]`}>
           <Image src={main_2} fill={true} alt="" objectFit="cover" />

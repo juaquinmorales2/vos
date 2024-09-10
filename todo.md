@@ -1,1 +1,3 @@
-add cursor from edil ozi
+- responsive for mobile
+- sidebar (agency)
+- loading (agency)

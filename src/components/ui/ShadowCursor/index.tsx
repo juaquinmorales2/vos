@@ -2,14 +2,14 @@
 
 import { FC, useEffect } from 'react';
 
-import useShadowCursor from '@/shared/utils/useShadowCursor'
+import initCursor from '@/shared/utils/useShadowCursor'
 
 interface Props { }
 
 const Index: FC<Props> = () => {
 
   useEffect(() => {
-    useShadowCursor();
+    initCursor();
   }, [])
   return (
     <div className='h-screen w-full fixed top-0 left-0 z-[-1] '>

@@ -3,7 +3,7 @@
 //   initFluid();
 // });
 
-const useShadowCursor = () => {
+const initCursor = () => {
   // anim setup || in an active project you can set this to the html body. however ive found a bound box to the viewport looks + performs better
   const canvas = document.getElementById('fluid');
   resizeCanvas();
@@ -1173,4 +1173,4 @@ const useShadowCursor = () => {
   }
 };
 
-export default useShadowCursor;
+export default initCursor;

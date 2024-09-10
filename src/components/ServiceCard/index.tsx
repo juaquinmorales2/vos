@@ -6,14 +6,14 @@ interface Props {
 }
 
 const Index: FC<Props> = ({ card: { title, services, description, number, classes } }) => {
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     triggerOnce: true,
     threshold: 0.6,
   });
   return (
-    <div ref={ref} key={number} className="px-[6vw] pb-[9.5vw] last:pb-48">
+    <div ref={ref} key={number} className="px-[6vw] pb-[9.5vw] last:pb-[13vw]">
       <h4 className="text-[3.7vw] font-light ">{title}</h4>
-      <div className={`flex items-start  space-x-[3vw] pt-[3vw] first:border-none ${classes}`}>
+      <div className={`flex items-start space-x-[3vw] pt-[3vw] first:border-none ${classes}`}>
         <div className="flex-1">
           <div className="flex flex-wrap space-y-[2vw]">
             {services.map((service: string[], i: number) => {

@@ -24,7 +24,7 @@ const Index: FC<Props> = () => {
         <Button
           onClick={handleFormToggle}
           title="ОСТАВИТЬ ЗАЯВКУ"
-          classes="px-[1.8vw] py-[2.2vw] w-[30vw] min-h-[6vw] text-[1.25vw] bg-bg-1 hover:bg-bg-1/80"
+          classes="px-[1.8vw] py-[2vw] w-[35vw] min-h-[6vw] text-[1.25vw] bg-bg-1 hover:bg-bg-1/80"
           btnClasses="mt-[1.2vw]"
         />
       </div>

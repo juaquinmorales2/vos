@@ -13,11 +13,11 @@ const Index: FC<Props> = ({ cards, itemClasses, wrapperClasses }) => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
-    <div className={cn('grid md:grid-cols-3 ', itemClasses)}>
+    <div className={cn('grid md:grid-cols-2 ', itemClasses)}>
       {cards.map((card, idx) => (
         <div
           key={idx}
-          className={cn('relative flex flex-col px-[0.4vw] py-[0.3vw] last:col-span-2', itemClasses)}
+          className={cn('relative flex flex-col px-[0.4vw] md:px-[0.6vw] md:py-[0.5vw] py-[0.3vw] last:col-span-2', itemClasses)}
           onMouseEnter={() => setHoveredIdx(idx)}
           onMouseLeave={() => setHoveredIdx(null)}
         >
@@ -48,9 +48,9 @@ const Index: FC<Props> = ({ cards, itemClasses, wrapperClasses }) => {
           >
             <div className="flex items-center space-x-[0.6vw]">
               {<card.icon />}
-              <h6 className="text-[1.6vw]">{card.title}</h6>
+              <h6 className="text-[1.6vw] md:text-[2.25vw]">{card.title}</h6>
             </div>
-            <p className="text-[1vw] font-light leading-[150%]">{card.description}</p>
+            <p className="text-[1vw] md:text-[1.35vw] font-light leading-[150%]">{card.description}</p>
           </div>
         </div>
       ))}

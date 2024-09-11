@@ -14,17 +14,17 @@ const Index: FC<Props> = () => {
   };
 
   return (
-    <SectionOpacity classes="flex flex-col justify-center h-screen ">
+    <SectionOpacity classes="flex flex-col justify-center h-screen md:h-[calc(100vh/2)]">
 
       <div className=" mx-auto flex w-full max-w-[60vw] flex-1 flex-col items-center justify-center text-center">
-        <h3 className="text-[4vw] font-medium">НАПИШИТЕ НАМ</h3>
-        <p className="mt-[0.6vw] text-[1.7vw] font-normal text-gray-300">
+        <h3 className="text-[4vw] md:text-[5vw] font-medium">НАПИШИТЕ НАМ</h3>
+        <p className="mt-[0.6vw] text-[1.7vw] md:text-[2vw] font-normal text-gray-300">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident consequatur ullam veniam omnis dolores cum.
         </p>
         <Button
           onClick={handleFormToggle}
           title="ОСТАВИТЬ ЗАЯВКУ"
-          classes="px-[1.8vw] py-[2vw] w-[35vw] min-h-[6vw] text-[1.25vw] bg-bg-1 hover:bg-bg-1/80"
+          classes="px-[1.8vw] py-[2vw] w-[35vw] md:w-[45vw] min-h-[6vw] text-[1.25vw] md:text-[1.5vw] bg-bg-1 hover:bg-bg-1/80"
           btnClasses="mt-[1.2vw]"
         />
       </div>

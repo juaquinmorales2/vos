@@ -2,8 +2,6 @@
 import { useRouter } from 'next/navigation';
 import { FC, FormEvent, useState } from 'react';
 
-import { supabase } from '@/lib/supabase';
-
 import { BOOK_FORM_DEFAULT_STATE, INPUT_FIELDS, RADIO_FIELDS } from '@/data';
 
 //components
@@ -16,19 +14,6 @@ const Index: FC<Props> = () => {
   const [form, setForm] = useState(BOOK_FORM_DEFAULT_STATE);
   const { push } = useRouter();
 
-  const submit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('submit form', form);
-    if (form._budget && form._pages && form._quickness && form._service) {
-      //better use zod fornm valudation
-    }
-    const { status } = await supabase.from('agncy_requests').insert(form);
-    if (status === 201) {
-      // toast({ title: 'success message', description: 'ehehhehe' });
-    } else {
-      // toast({ title: 'please, call us', description: 'ehehhehe', duration: 6000 });
-    }
-  };
   return (
     <div className="mx-auto max-w-[70vw] md:max-w-[85vw] px-[6vw]">
       <div className="relative">
@@ -46,7 +31,7 @@ const Index: FC<Props> = () => {
         </button>
         <h1 className="mb-[1.75vw] md:text-[4.6vw] md:mb-[2.25vw] text-center text-[3.5vw] font-bold leading-[100%]">Оставить заявку</h1>
       </div>
-      <form className="flex h-full flex-col items-center" onSubmit={submit}>
+      <form className="flex h-full flex-col items-center">
         <div className="flex flex-wrap">
           {RADIO_FIELDS.map((item) => (
             <RadioGroup

@@ -39,20 +39,6 @@ a {
   }
 }
 
-.perfect-scrollbar {
-  overflow: hidden;
-  overflow-y: auto;
-  &::-webkit-scrollbar {
-    width: 10px;
-    background: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    border: 2px solid transparent;
-    background-clip: content-box;
-    background-color: #202020;
-    cursor: pointer;
-  }
-}
 //navigation
 .burger {
   width: 100%;

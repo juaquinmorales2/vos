@@ -67,7 +67,7 @@ export const APPROACH_CARDS = [
 export const RADIO_FIELDS = [
   {
     title: 'Какой тип услуг вас интересует?',
-    classes: 'mr-8',
+    classes: 'mr-[2.25vw]',
     radioArray: [
       { name: 'Дизайн / Брендинг', value: 'design/branding' },
       { name: 'Веб разработка', value: 'web-dev' },
@@ -90,7 +90,7 @@ export const RADIO_FIELDS = [
   },
   {
     title: 'Примерно, сколько страниц будет иметь ваш проект?',
-    classes: 'mr-8',
+    classes: 'mr-[2.25vw]',
     radioArray: [
       { name: 'Меньше 5-ти', value: '<5' },
       { name: '6-10', value: '6-10' },
@@ -113,8 +113,8 @@ export const RADIO_FIELDS = [
 ];
 
 export const INPUT_FIELDS = [
-  { label: 'Выше имя', name: 'first', classes: 'inline-block !w-[calc(50%-16px)] mr-8', required: true },
-  { label: 'Ваш номер', name: 'phone', classes: 'inline-block !w-[calc(50%-16px)]', type: 'number', required: true },
+  { label: 'Выше имя', name: 'first', classes: 'inline-block !w-[calc(50%-2vw)] mr-[4vw]', required: true },
+  { label: 'Ваш номер', name: 'phone', classes: 'inline-block !w-[calc(50%-2vw)]', type: 'number', required: true },
   { label: 'Email', name: 'email', classes: '', type: 'email' },
   { label: 'Название компании', name: 'company', classes: '', required: true },
   { label: 'Ссылка на сайт', name: 'websiteUrl', classes: '' },

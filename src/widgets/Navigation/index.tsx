@@ -1,5 +1,5 @@
 'use client';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import SidebarMenu from '@/components/SidebarMenu';
 import { AnimatePresence } from 'framer-motion';
@@ -10,6 +10,17 @@ interface Props {}
 const Index: FC<Props> = () => {
   const [isActive, setIsActive] = useState(false);
   const closeSidebar = () => setIsActive(false);
+
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsActive(false);
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
   return (
     <div >
       <div className="fixed right-0 z-[4001] p-[2vw]">

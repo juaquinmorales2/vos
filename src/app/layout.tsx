@@ -1,8 +1,7 @@
 'use client';
 
-import Lenis from '@studio-freight/lenis';
+import Lenis from 'lenis';
 
-import { Toaster } from '@/components/ui/Toast/toaster';
 
 import { Montserrat } from 'next/font/google';
 import { useEffect, useState } from 'react';
@@ -41,7 +40,6 @@ export default function RootLayout({
       <body className={montserrat.className}>
         <main>
           {children}
-          <Toaster />
         </main>
       </body>
     </html>

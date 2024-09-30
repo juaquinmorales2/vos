@@ -48,9 +48,9 @@ const Index: FC<Props> = ({ cards, itemClasses, wrapperClasses }) => {
           >
             <div className="flex items-center space-x-[0.6vw]">
               {<card.icon />}
-              <h6 className="text-[1.6vw] md:text-[2.25vw]">{card.title}</h6>
+              <h6 className="text-[1.6vw] md:text-[3vw] md:tracking-tight">{card.title}</h6>
             </div>
-            <p className="text-[1vw] md:text-[1.35vw] font-light leading-[150%]">{card.description}</p>
+            <p className="text-[1vw] md:text-[1.8vw] font-light leading-[1.5] md:leading-[1.2] md:tracking-tight">{card.description}</p>
           </div>
         </div>
       ))}

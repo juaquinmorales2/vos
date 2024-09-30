@@ -31,16 +31,16 @@ const Hero = () => {
     <section id="main" className="relative bg-gradient-to-b  ">
       <div
         onMouseMove={(e) => manageMouseMove(e)}
-        className="relative left-0 top-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden md:h-[calc(100vh/2)]"
+        className="relative left-0 top-0 flex h-screen w-full flex-col items-center justify-center overflow-hidden md:h-[80vh]"
       >
         <motion.h1
           ref={heading1}
-          className="relative z-20 mt-[-5vw] w-full text-center text-[4.5vw] md:text-[5vw] font-extrabold text-text-1 "
+          className="relative z-20 mt-[-5vw] w-full text-center text-[4.5vw] md:text-[6vw] md:leading-[1.2] font-extrabold text-text-1 max-w-[95%]"
           style={{ opacity }}
         >
           СОЗДАЕМ УНИКАЛЬНОСТЬ
         </motion.h1>
-        <motion.h2 ref={heading2} className="z-20 text-[1.7vw] md:text-[2vw] font-medium text-text-1/7 5" style={{ opacity }} >
+        <motion.h2 ref={heading2} className="z-20 text-[1.7vw] md:text-[3vw] font-medium text-text-1/7 5" style={{ opacity }} >
           Креативное агенство из Туркменистана
         </motion.h2>
         <div ref={ref1} className={`absolute left-0 top-0 z-10 h-full w-full`}>

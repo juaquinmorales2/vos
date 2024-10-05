@@ -8,8 +8,6 @@ import { useScroll, useTransform, motion } from 'framer-motion';
 
 import { main_1, main_2, main_3 } from './images/index';
 
-import ShootingStars from '@/components/ui/ShootingStars';
-
 const Hero = () => {
   const ref1 = useRef(null);
   const ref2 = useRef(null);
@@ -55,7 +53,6 @@ const Hero = () => {
           <Image src={main_3} fill={true} alt="" objectFit="cover" />
         </div>
       </div>
-      <ShootingStars />
     </section>
   );
 };

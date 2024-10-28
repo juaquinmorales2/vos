@@ -14,8 +14,13 @@ const Index: FC<Props> = () => {
   const [form, setForm] = useState(BOOK_FORM_DEFAULT_STATE);
   const { push } = useRouter();
 
+  const handleSubmit = (e: any) => {
+    e.preventDefault()
+    console.log(form)
+  }
+
   return (
-    <div className="mx-auto max-w-[70vw] md:max-w-[85vw] px-[6vw]">
+    <div className="mx-auto max-w-[70vw] md:max-w-[85vw] px-[4vw] ">
       <div className="relative">
         <button
           className=" group absolute left-0 top-[25%] z-10 box-content rounded-full bg-stone-800 p-[0.5vw] hover:bg-stone-800"
@@ -31,7 +36,7 @@ const Index: FC<Props> = () => {
         </button>
         <h1 className="mb-[1.75vw] md:text-[4.6vw] md:mb-[2.25vw] text-center text-[3.5vw] font-bold leading-[100%]">Оставить заявку</h1>
       </div>
-      <form className="flex h-full flex-col items-center">
+      <form className="flex h-full flex-col items-center" onSubmit={handleSubmit}>
         <div className="flex flex-wrap">
           {RADIO_FIELDS.map((item) => (
             <RadioGroup

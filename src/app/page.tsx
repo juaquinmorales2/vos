@@ -17,8 +17,9 @@ export default function Home() {
       <Services />
       <Approach />
       <CallToAction />
+
+      {/* disable cursor here */}
       <ShadowCursor />
-      {/* <CanvasCursor /> */}
     </>
   );
 }

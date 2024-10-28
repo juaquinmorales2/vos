@@ -2,7 +2,6 @@
 
 import Lenis from 'lenis';
 
-
 import { Montserrat } from 'next/font/google';
 import { useEffect, useState } from 'react';
 

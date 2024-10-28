@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Демо сайт креативного агентство
 
-## Getting Started
+Адаптивный и стильный лендинг креативного агентства с современными анимациями и интерактивными компонентами. Проект разработан для создания яркого впечатления.
 
-First, run the development server:
+## Функционал
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Адаптивный дизайн**: оптимизирован для работы на различных устройствах и экранах.
+- **Анимированный сайдбар меню**: плавные анимации для открытия и закрытия меню.
+- **Smoke-курсор**: эффектный дымчатый курсор для дополнительного wow-эффекта.
+- **Форма для отправки запроса**: готовая форма с интерактивными полями для отправки заявок.
+- **Анимированные компоненты**: динамичные переходы и эффекты для компонентов, чтобы оживить интерфейс.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Используемые библиотеки
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **[TailwindCSS](https://tailwindcss.com/)** — утилитарный CSS-фреймворк для создания адаптивных интерфейсов.
+- **[GSAP](https://greensock.com/gsap/)** — библиотека для создания анимаций высокой производительности.
+- **[Framer Motion](https://www.framer.com/motion/)** — декларативные анимации и жесты для React-компонентов.
+- **[Lenis](https://github.com/studio-freight/lenis)** — кастомный скролл для плавного пользовательского опыта.
+- **[Edil Ozi](https://www.framer.com/motion/)** — готовые анимированные компоненты для приложений React.
+- **[shadcn/ui](https://ui.shadcn.dev/)** — коллекция интерфейсных компонентов с полной поддержкой кастомизации.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Установка и запуск
 
-## Learn More
+ *Клонируйте репозиторий и запустите* :
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/Shatlyk1011/agency-website.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```
+   cd agency-website
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```
+   npm i
+   ```
 
-## Deploy on Vercel
+   ```
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **Примечания**
+** Курсор с эффектом дыма реализован с использованием WebGL. На устройствах с низкой производительностью или устаревших браузерах этот эффект может снижать скорость работы сайта или отображаться некорректно.** <br/> <br/>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Для отключение курсора локально, перейдите к корневой странице `app/page.tsx` и отключите компонент ` <ShadowCursor />` **

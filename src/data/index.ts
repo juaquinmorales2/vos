@@ -60,7 +60,8 @@ export const APPROACH_CARDS = [
   {
     icon: Fifth,
     title: 'Финальный результат',
-    description: 'Готовый продукт, который ...',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates laboriosam ad eius, culpa soluta ab. Beatae optio quas adipisci aliquam quia velit soluta iste dicta, modi tenetur magnam, aut laborum placeat est. Unde minima amet illo eveniet qui sunt omnis laudantium laboriosam, officia dignissimos molestias tempore velit. Provident, explicabo. Dolor.',
   },
 ];
 

@@ -34,7 +34,10 @@ const Index: FC<Props> = () => {
       <button title="your_agency_name" className="p-[2vw] fixed z-[100] top-0 left-0 group">
         <LogoIcon className="w-[5vw] h-[5vw] group-hover:text-white/80 transition duration-300" />
       </button>
-      <AnimatePresence mode="wait">{isActive && <SidebarMenu close={closeSidebar} />}</AnimatePresence>
+      <AnimatePresence mode="wait">{isActive && (
+        <SidebarMenu close={closeSidebar} />
+      )}
+      </AnimatePresence>
     </div>
   );
 };

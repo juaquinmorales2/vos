@@ -16,8 +16,8 @@
 - **[TailwindCSS](https://tailwindcss.com/)** — утилитарный CSS-фреймворк для создания адаптивных интерфейсов.
 - **[GSAP](https://greensock.com/gsap/)** — библиотека для создания анимаций высокой производительности.
 - **[Framer Motion](https://www.framer.com/motion/)** — декларативные анимации и жесты для React-компонентов.
-- **[Lenis](https://github.com/studio-freight/lenis)** — кастомный скролл для плавного пользовательского опыта.
-- **[Edil Ozi](https://www.framer.com/motion/)** — готовые анимированные компоненты для приложений React.
+- **[Lenis](https://github.com/darkroomengineering/lenis)** — кастомный скролл для плавного пользовательского опыта.
+- **[Edil Ozi](https://github.com/Edil-ozi/edil-ozi)** — готовые анимированные компоненты для приложений React.
 - **[shadcn/ui](https://ui.shadcn.dev/)** — коллекция интерфейсных компонентов с полной поддержкой кастомизации.
 
 ## Установка и запуск

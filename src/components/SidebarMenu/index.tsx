@@ -1,38 +1,17 @@
 import { FC, useState } from 'react';
 import { motion } from 'framer-motion';
-// import Link as NextLink from 'next/link';
+import Link from 'next/link';
 
 import CustomLink from './Link';
 
+import { NAV_ITEMS } from '@/data';
+
 import { menuSlide } from '@/shared/utils/animations';
-import Link from 'next/link';
 
 interface Props {
   close: () => void;
 }
 
-const navItems = [
-  {
-    title: 'Главная',
-    href: 'main',
-  },
-  {
-    title: 'О нас',
-    href: 'about',
-  },
-  {
-    title: 'Услуги',
-    href: 'services',
-  },
-  {
-    title: 'Подход',
-    href: 'approach',
-  },
-  {
-    title: 'Связаться',
-    href: 'contact',
-  },
-];
 
 const Index: FC<Props> = ({ close }) => {
   const [selectedIndicator, setSelectedIndicator] = useState(null);
@@ -57,7 +36,7 @@ const Index: FC<Props> = ({ close }) => {
         <div className='flex flex-col h-full justify-between'>
 
           <div className="flex flex-col justify-end space-y-[0.1vw]" onMouseLeave={() => setSelectedIndicator(null)}>
-            {navItems.map((item, index) => (
+            {NAV_ITEMS.map((item, index) => (
               <CustomLink
                 handleClick={() => smoothScroll(item.href)}
                 key={item.title}

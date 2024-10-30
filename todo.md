@@ -1,3 +1,0 @@
-- responsive for mobile
-- sidebar (agency)
-- loading (agency)

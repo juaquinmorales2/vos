@@ -1,5 +1,28 @@
 import { First, Second, Third, Fourth, Fifth } from '@/icons/ApproachIcons';
 
+export const NAV_ITEMS = [
+  {
+    title: 'Главная',
+    href: 'main',
+  },
+  {
+    title: 'О нас',
+    href: 'about',
+  },
+  {
+    title: 'Услуги',
+    href: 'services',
+  },
+  {
+    title: 'Подход',
+    href: 'approach',
+  },
+  {
+    title: 'Связаться',
+    href: 'contact',
+  },
+];
+
 export const CARDS = [
   {
     title: 'Дизайн',

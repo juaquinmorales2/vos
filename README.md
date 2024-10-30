@@ -1,28 +1,27 @@
-# Демо сайт креативного агентство
+# Demo site of a creative agency
 
-Адаптивный и стильный лендинг креативного агентства с современными анимациями и интерактивными компонентами. Проект разработан для создания яркого впечатления.
-## Дизайн
-- **[Ссылка на фигму](https://www.figma.com/design/65gFXT6dvNfDjkX5osjZbu/Untitled?node-id=5-2&t=zgqFDE8HGEajkIoE-1)**
-## Функционал
-- **Адаптивный дизайн**: оптимизирован для работы на различных устройствах и экранах.
-- **Анимированный сайдбар меню**: плавные анимации для открытия и закрытия меню.
-- **Smoke-курсор**: эффектный дымчатый курсор для дополнительного wow-эффекта.
-- **Форма для отправки запроса**: готовая форма с интерактивными полями для отправки заявок.
-- **Анимированные компоненты**: динамичные переходы и эффекты для компонентов, чтобы оживить интерфейс.
-- **Юниты vw**: сайт полностью сделан использую юниты vw (view width). [Подробнее](https://www.sitepoint.com/css-viewport-units-quick-start/)
+Adaptive and stylish landing page of a creative agency with modern animations and interactive components. The project is designed to create a vivid impression.
+## Design
+- **[Figma](https://www.figma.com/design/65gFXT6dvNfDjkX5osjZbu/Untitled?node-id=5-2&t=zgqFDE8HGEajkIoE-1)**
+## Functionality
+- **Adaptive design**: optimized for different devices and screens.
+- **Animated sidebar menu**: smooth animations for opening and closing the menu.
+- **Smoke cursor**: spectacular smoky cursor for an additional wow effect.
+- **Request form**: ready-made form with interactive fields for sending requests.
+- **Animated components**: dynamic transitions and effects for components to liven up the interface.
 
-## Используемые библиотеки
+## Libraries
 
-- **[TailwindCSS](https://tailwindcss.com/)** — утилитарный CSS-фреймворк для создания адаптивных интерфейсов.
-- **[GSAP](https://greensock.com/gsap/)** — библиотека для создания анимаций высокой производительности.
-- **[Framer Motion](https://www.framer.com/motion/)** — декларативные анимации и жесты для React-компонентов.
-- **[Lenis](https://github.com/darkroomengineering/lenis)** — кастомный скролл для плавного пользовательского опыта.
-- **[Edil Ozi](https://github.com/Edil-ozi/edil-ozi)** — готовые анимированные компоненты для приложений React.
-- **[shadcn/ui](https://ui.shadcn.dev/)** — коллекция интерфейсных компонентов с полной поддержкой кастомизации.
+- **[TailwindCSS](https://tailwindcss.com/)** — a utility CSS framework for creating responsive interfaces.
+- **[GSAP](https://greensock.com/gsap/)** — a library for creating high-performance animations.
+- **[Framer Motion](https://www.framer.com/motion/)** — declarative animations and gestures for React components.
+- **[Lenis](https://github.com/darkroomengineering/lenis)** — custom scroll for smooth user experience.
+- **[Edil Ozi](https://github.com/Edil-ozi/edil-ozi)** — ready-made animated components for React applications.
+- **[shadcn/ui](https://ui.shadcn.dev/)** — a collection of interface components with full customization support.
 
-## Установка и запуск
+## Running the project
 
- *Клонируйте репозиторий и запустите* :
+ *Clone the repository and run* :
 
    ```bash
    git clone https://github.com/Shatlyk1011/agency-website.git
@@ -40,7 +39,8 @@
    npm run dev
    ```
 
-## **Примечания**
-**Курсор с эффектом дыма реализован с использованием WebGL. На устройствах с низкой производительностью или устаревших браузерах этот эффект может снижать скорость работы сайта или отображаться некорректно.** <br/> <br/>
+## **Notes**
+**The smoke cursor is implemented using WebGL. On low-performance devices or outdated browsers, this effect may slow down the site or display incorrectly.** <br/> <br/>
+**To disable the cursor locally, go to the root page `app/page.tsx` and disable the ` <ShadowCursor />` component**
 
-**Для отключение курсора локально, перейдите к корневой странице `app/page.tsx` и отключите компонент ` <ShadowCursor />`**
+This site is completely made using VW units (view width). [More](https://www.sitepoint.com/css-viewport-units-quick-start/)

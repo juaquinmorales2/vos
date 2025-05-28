@@ -44,3 +44,4 @@ Adaptive and stylish landing page of a creative agency with modern animations an
 **To disable the cursor locally, go to the root page `app/page.tsx` and disable the ` <ShadowCursor />` component**
 
 This site is completely made using VW units (view width). [More](https://www.sitepoint.com/css-viewport-units-quick-start/)
+"# vos" 

@@ -40,7 +40,7 @@ const Index: FC<Props> = () => {
               Somos la agencia dedicada a la creación de experiencias digitales únicas y memorables. Estamos comprometidos con la excelencia y la innovación en cada proyecto que emprendemos.
             </p>
             
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/UssifiwOd7A?si=lszU8Z-q0tBq_som" className='mt-10 md:w-full' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/UssifiwOd7A?si=lszU8Z-q0tBq_som" className='mt-10 md:w-full' title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             
           </div>
 

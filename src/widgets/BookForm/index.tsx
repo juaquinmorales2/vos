@@ -12,8 +12,14 @@ const SERVICE_ID  = 'service_02102004';
 const TEMPLATE_ID = 'template_5q75jgb';
 const PUBLIC_KEY  = 'eKNCQD46NMHntghcz';
 
-const index: FC = () => {
-  const [form, setForm] = useState(BOOK_FORM_DEFAULT_STATE);
+// Define the type for the form state based on BOOK_FORM_DEFAULT_STATE
+type BookFormState = typeof BOOK_FORM_DEFAULT_STATE;
+
+// Get all valid keys for the form state as a union type
+type BookFormField = keyof BookFormState;
+
+const Solicitud: FC = () => {
+  const [form, setForm] = useState<BookFormState>(BOOK_FORM_DEFAULT_STATE);
   const formRef = useRef<HTMLFormElement>(null);
   const { push } = useRouter();
 
@@ -48,14 +54,12 @@ const index: FC = () => {
         </h1>
       </div>
 
-      <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-        {/* Radio fields */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-8">
           {RADIO_FIELDS.map((item) => (
             <div key={item.formKey}>
               <RadioGroup
                 onValueChange={(value) =>
-                  setForm((prev) => ({ ...prev, [item.formKey]: value }))
+                  setForm((prev) => ({ ...prev, [item.formKey as keyof BookFormState]: value }))
                 }
                 required
               >
@@ -80,14 +84,10 @@ const index: FC = () => {
               <input
                 type="hidden"
                 name={item.formKey}
-                value={form[item.formKey] || ''}
+                value={form[item.formKey as keyof BookFormState] || ''}
               />
             </div>
           ))}
-        </div>
-
-        {/* Inputs */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {INPUT_FIELDS.map((field) => (
             <div key={field.name} className="w-full">
               <label
@@ -101,16 +101,15 @@ const index: FC = () => {
                 name={field.name}
                 type={field.type || 'text'}
                 required={field.required}
-                value={form[field.name]}
+                value={form[field.name as BookFormField] ?? ''}
                 onChange={(e) =>
-                  setForm((prev) => ({ ...prev, [field.name]: e.target.value }))
+                  setForm((prev) => ({ ...prev, [field.name as BookFormField]: e.target.value }))
                 }
                 className="w-full h-10 sm:h-12 px-3 border rounded-md focus:outline-none"
               />
             </div>
           ))}
 
-          {/* Mensaje */}
           <div className="col-span-full">
             <label
               htmlFor="message"
@@ -131,19 +130,18 @@ const index: FC = () => {
               className="w-full min-h-[150px] px-3 py-2 border rounded-md focus:outline-none"
             />
           </div>
-        </div>
 
-        <div>
-          <Button
-            type="submit"
-            title="Enviar"
-            classes="px-6 py-2 sm:px-8 sm:py-3 text-base sm:text-lg bg-bg-1/90 hover:bg-bg-1/80"
-            btnClasses="capitalize"
-          />
-        </div>
-      </form>
+          <div>
+            <Button
+              type="submit"
+              title="Enviar"
+              classes="px-6 py-2 sm:px-8 sm:py-3 text-base sm:text-lg bg-bg-1/90 hover:bg-bg-1/80"
+              btnClasses="capitalize"
+            />
+          </div>
+        </form>
     </div>
   );
 };
 
-export default index;
+export default Solicitud;

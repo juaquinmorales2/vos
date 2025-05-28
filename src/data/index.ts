@@ -2,54 +2,53 @@ import { First, Second, Third, Fourth, Fifth } from '@/icons/ApproachIcons';
 
 export const NAV_ITEMS = [
   {
-    title: 'Главная',
+    title: 'Inicio',
     href: 'main',
   },
   {
-    title: 'О нас',
+    title: 'Nosotros',
     href: 'about',
   },
   {
-    title: 'Услуги',
+    title: 'Servicios',
     href: 'services',
   },
   {
-    title: 'Подход',
+    title: 'Enfoque',
     href: 'approach',
   },
   {
-    title: 'Связаться',
+    title: 'Contactanos',
     href: 'contact',
   },
 ];
-
 export const CARDS = [
   {
-    title: 'Дизайн',
+    title: 'Diseño',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
+      'Creamos soluciones visuales atractivas y funcionales que reflejan la identidad de tu marca, desde sitios web hasta logotipos y material gráfico.',
     services: [
-      ['Веб страниц', 'Брендинг'],
-      ['Мобильные приложения', 'Лого'],
+      ['Páginas web', 'Branding'],
+      ['Aplicaciones móviles', 'Logo'],
     ],
     number: '01.',
     classes: '',
   },
   {
-    title: 'Фулстек разработка',
+    title: 'Desarrollo Fullstack',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
+      'Desarrollamos plataformas completas, integrando frontend y backend para ofrecer soluciones eficientes, seguras y escalables a medida.',
     services: [
-      ['Онлайн магазин', 'Веб приложения'],
-      ['CMS', 'Разработка API'],
+      ['Tienda en línea', 'Aplicaciones web'],
+      ['CMS', 'Desarrollo de API'],
     ],
     number: '02.',
     classes: 'border-t border-gray-1/50',
   },
   {
-    title: 'Мобильная разработка',
+    title: 'Desarrollo móvil',
     description:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam alias placeat temporibus mollitia doloribus. Consequatur aperiam facilis culpa fuga quia! Labore, sequi! Optio officiis obcaecati tempora voluptates consequuntur, placeat ad.',
+      'Construimos aplicaciones móviles nativas e híbridas optimizadas para Android y iOS, con enfoque en rendimiento, usabilidad y diseño intuitivo.',
     services: [['Android', 'IOS']],
     number: '03.',
     classes: 'border-t border-gray-1/50',
@@ -59,64 +58,65 @@ export const CARDS = [
 export const APPROACH_CARDS = [
   {
     icon: First,
-    title: 'Консультация',
+    title: 'Consulta',
     description:
-      'Мы внимательно выслушиваем пожелания и представления заказчика о проекте. Затем делимся своим видением и, на основе этого обмена, приходим к общему соглашению.',
+      'Escuchamos cuidadosamente los deseos y conceptos del cliente sobre el proyecto. Luego compartimos nuestra visión y, con base en ese intercambio, llegamos a un acuerdo común.',
   },
   {
     icon: Second,
-    title: 'Совместный обзор',
+    title: 'Revisión conjunta',
     description:
-      'Затем приступаем к созданию дизайна. После завершения проводим совместный обзор, где заказчик, при желании может внести изменения.',
+      'Después comenzamos con el diseño. Una vez terminado, realizamos una revisión conjunta donde el cliente puede, si lo desea, hacer cambios.',
   },
   {
     icon: Third,
-    title: 'Разработка',
-    description: 'После утверждения дизайна, мы приступаем к непосредственной разработке продукта.',
+    title: 'Desarrollo',
+    description: 'Después de aprobar el diseño, comenzamos directamente con el desarrollo del producto.',
   },
   {
     icon: Fourth,
-    title: 'Тестирование',
+    title: 'Pruebas',
     description:
-      'По завершении разработки тщательно тестируем каждый компонент продукта. Затем приглашаем заказчика для пользовательского тестирования.',
+      'Una vez finalizado el desarrollo, probamos cuidadosamente cada componente del producto. Luego invitamos al cliente a hacer pruebas de usuario.',
   },
   {
     icon: Fifth,
-    title: 'Финальный результат',
+    title: 'Resultado final',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates laboriosam ad eius, culpa soluta ab. Beatae optio quas adipisci aliquam quia velit soluta iste dicta, modi tenetur magnam, aut laborum placeat est. Unde minima amet illo eveniet qui sunt omnis laudantium laboriosam, officia dignissimos molestias tempore velit. Provident, explicabo. Dolor.',
+      'Entregamos la solución definitiva, completamente optimizada y documentada, lista para su implementación. Acompañamos al cliente con capacitación y soporte continuo, asegurando una transición fluida y el éxito sostenible del proyecto.',
   },
 ];
 
+
 export const RADIO_FIELDS = [
   {
-    title: 'Какой тип услуг вас интересует?',
+    title: '¿Qué tipo de servicios le interesan?',
     classes: 'mr-[2.25vw]',
     radioArray: [
-      { name: 'Дизайн / Брендинг', value: 'design/branding' },
-      { name: 'Веб разработка', value: 'web-dev' },
-      { name: 'Мобильная разработка', value: 'mobile-dev' },
-      { name: 'Все вышеперечисленные', value: 'all-types' },
-      { name: 'Другое', value: 'other-service' },
+      { name: 'Diseño / Branding', value: 'design/branding' },
+      { name: 'Desarrollo web', value: 'web-dev' },
+      { name: 'Desarrollo móvil', value: 'mobile-dev' },
+      { name: 'Todos los anteriores', value: 'all-types' },
+      { name: 'Otro', value: 'other-service' },
     ],
     formKey: '_service',
   },
   {
-    title: 'Каков ваш бюджет?',
+    title: '¿Cuál es su presupuesto? (USD)',
     classes: '',
     radioArray: [
-      { name: '8000TMT - 15000TMT', value: '8-15' },
-      { name: '15000TMT - 25000TMT', value: '15-25' },
-      { name: '25000TMT - 50000TMT', value: '25-50' },
-      { name: '50000TMT+', value: '50+' },
+      { name: '100 - 200', value: '8-15' },
+      { name: '200 - 500', value: '15-25' },
+      { name: '500 - 2000', value: '25-50' },
+      { name: '2000+', value: '50+' },
     ],
     formKey: '_budget',
   },
   {
-    title: 'Примерно, сколько страниц будет иметь ваш проект?',
+    title: 'Aproximadamente, ¿cuántas páginas tendrá su proyecto?',
     classes: 'mr-[2.25vw]',
     radioArray: [
-      { name: 'Меньше 5-ти', value: '<5' },
+      { name: 'Menos de 5', value: '<5' },
       { name: '6-10', value: '6-10' },
       { name: '11-20', value: '11-20' },
       { name: '20+', value: '20+' },
@@ -124,24 +124,24 @@ export const RADIO_FIELDS = [
     formKey: '_pages',
   },
   {
-    title: 'Насколько быстро вам нужен проект?',
+    title: '¿Qué tan pronto necesita el proyecto?',
     classes: '',
     radioArray: [
-      { name: 'Максимально быстро', value: 'max-fast' },
-      { name: 'Высокая приоритетность ', value: 'high-prio ' },
-      { name: 'Обычное время', value: 'regular' },
-      { name: 'Не торопитесь ', value: 'take-your-time' },
+      { name: 'Lo más rápido posible', value: 'max-fast' },
+      { name: 'Alta prioridad', value: 'high-prio ' },
+      { name: 'Tiempo normal', value: 'regular' },
+      { name: 'Sin apuros', value: 'take-your-time' },
     ],
     formKey: '_quickness',
   },
 ];
 
 export const INPUT_FIELDS = [
-  { label: 'Выше имя', name: 'first', classes: 'inline-block !w-[calc(50%-2vw)] mr-[4vw]', required: true },
-  { label: 'Ваш номер', name: 'phone', classes: 'inline-block !w-[calc(50%-2vw)]', type: 'number', required: true },
+  { label: 'Su nombre', name: 'first', classes: 'inline-block !w-[calc(50%-2vw)] mr-[4vw]', required: true },
+  { label: 'Su número', name: 'phone', classes: 'inline-block !w-[calc(50%-2vw)]', type: 'number', required: true },
   { label: 'Email', name: 'email', classes: '', type: 'email' },
-  { label: 'Название компании', name: 'company', classes: '', required: true },
-  { label: 'Ссылка на сайт', name: 'websiteUrl', classes: '' },
+  { label: 'Nombre de la empresa', name: 'company', classes: '', required: true },
+  { label: 'Enlace al sitio web', name: 'websiteUrl', classes: '' },
 ];
 
 export const BOOK_FORM_DEFAULT_STATE = {

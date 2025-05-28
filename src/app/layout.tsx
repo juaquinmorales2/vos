@@ -35,7 +35,7 @@ export default function RootLayout({
     requestAnimationFrame(raf);
   }, []);
   return (
-    <html lang="ru">
+    <html lang="es">
       <body className={montserrat.className}>
         <main>
           {children}

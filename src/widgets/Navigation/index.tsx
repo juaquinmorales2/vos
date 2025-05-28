@@ -3,12 +3,13 @@ import { FC, useEffect, useState } from 'react';
 
 import SidebarMenu from '@/components/SidebarMenu';
 import { AnimatePresence } from 'framer-motion';
-import { LogoIcon } from '@/icons/ApproachIcons/LogoIcon';
 
 interface Props {}
 
 const Index: FC<Props> = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+
   const closeSidebar = () => setIsActive(false);
 
   useEffect(() => {
@@ -21,24 +22,43 @@ const Index: FC<Props> = () => {
       document.removeEventListener("keydown", handleEscape);
     };
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsHidden(true);
+      } else {
+        setIsHidden(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div >
-      <div className="fixed right-0 z-[4001] p-[2vw]">
-        <button
-          type="button"
-          onClick={() => setIsActive(!isActive)}
-          className="flex h-[4.5vw] w-[4.5vw] cursor-pointer items-center justify-center rounded-full bg-stone-400">
-          <div className={`burger ${isActive && 'burgerActive'}`}></div>
-        </button>
-      </div>
-      <button title="your_agency_name" className="p-[2vw] fixed z-[100] top-0 left-0 group">
-        <LogoIcon className="w-[5vw] h-[5vw] group-hover:text-white/80 transition duration-300" />
-      </button>
-      <AnimatePresence mode="wait">{isActive && (
-        <SidebarMenu close={closeSidebar} />
-      )}
-      </AnimatePresence>
-    </div>
+    <nav className="fixed top-4 left-0 right-0 z-[4001] flex items-center justify-between p-[2vw]">
+      <>
+
+        {/* Menu Toggle Button */}
+        <div className="fixed right-0 z-[4001] p-[2vw]">
+          <button
+            type="button"
+            onClick={() => setIsActive(!isActive)}
+            className="flex h-[4.5vw] w-[4.5vw] md:leading-relaxed md:h-10 md:w-10 cursor-pointer bg-white items-center justify-center rounded-full md:mr-4 md:mt-4"
+          >
+            <div className={`burger ${isActive && 'burgerActive'}`}></div>
+          </button>
+        </div>
+
+        <AnimatePresence mode="wait">
+          {isActive && <SidebarMenu close={closeSidebar} />}
+        </AnimatePresence>
+      </>
+    </nav>
   );
 };
+
 export default Index;

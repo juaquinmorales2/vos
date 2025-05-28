@@ -12,7 +12,7 @@ const Index: FC<Props> = ({ card: { title, services, description, number, classe
   });
   return (
     <div ref={ref} key={number} className="px-[6vw] md:px-[3vw] pb-[9.5vw] last:pb-[13vw]">
-      <h4 className="text-[3.7vw] md:text-[7vw] md:mt-[3vw] font-light">{title}</h4>
+      <h4 className="text-[3.7vw] md:text-[7vw] md:mt-[3vw] font-light text-blue-400">{title}</h4>
       <div className={`flex items-start space-x-[3vw] md:space-x-0 pt-[3vw] first:border-none md:flex-col ${classes}`}>
         <div className="flex-1 md:mb-[2vw]">
           <div className="flex flex-wrap space-y-[2vw] md:space-y-[1.5vw]  ">
@@ -21,7 +21,7 @@ const Index: FC<Props> = ({ card: { title, services, description, number, classe
                 <ul key={i} className="flex items-center space-x-[5vw] text-[1.7vw] md:text-[3vw] md: font-semibold">
                   {service.map((s) => (
                     <li key={s} className="flex items-center space-x-[0.6vw]">
-                      <div className="h-[1.2vw] w-[1.2vw] rounded-full bg-[#fff]/40"></div>
+                      <div className="h-[1.2vw] w-[1.2vw] rounded-full bg-blue-400/40"></div>
                       <p>{s}</p>
                     </li>
                   ))}

@@ -12,6 +12,7 @@ import Wharsapp from '@/components/whatsappButton';
 
 export default function Home() {
   return (
+    <>
       <Navigation />
       <Wharsapp />
       <Hero />
@@ -19,7 +20,6 @@ export default function Home() {
       <Services />
       <Approach />
       <CallToAction />
-
       <ShadowCursor />
     </>
   );

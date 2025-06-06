@@ -6,13 +6,14 @@ import About from '@/widgets/About';
 import Services from '@/widgets/Services';
 import Approach from '@/widgets/Approach';
 import CallToAction from '@/widgets/CallToAction';
-import ShadowCursor from '@/components/ui/ShadowCursor'
-import Works from '@/widgets/Works'
+import ShadowCursor from '@/components/ui/ShadowCursor';
+import Works from '@/widgets/Works';
+import Wharsapp from '@/components/whatsappButton';
 
 export default function Home() {
   return (
-    <>
       <Navigation />
+      <Wharsapp />
       <Hero />
       <About />
       <Services />
